@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>欢迎来到零食小铺 - 登录</title>
+    <style>
+        /* 基础样式重置 */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'PingFang SC', 'Microsoft YaHei', sans-serif;
+        }
+
+        /* 页面背景：使用温暖的奶油色/淡黄色调 */
+        body {
+            background-color: #fdf6ec;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-image: radial-gradient(#ffe3c2 10%, transparent 11%);
+            background-size: 20px 20px;
+        }
+
+        /* 登录卡片容器 */
+        .login-container {
+            background-color: #ffffff;
+            padding: 40px 30px;
+            border-radius: 20px;
+            box-shadow: 0 10px 25px rgba(212, 126, 32, 0.15);
+            width: 100%;
+            max-width: 400px;
+            text-align: center;
+            border: 2px solid #ffe3c2;
+        }
+
+        /* 网站Logo或标志性文字 */
+        .brand-logo {
+            font-size: 28px;
+            font-weight: bold;
+            color: #d47e20; /* 焦糖色 */
+            margin-bottom: 10px;
+        }
+
+        .brand-slogan {
+            font-size: 14px;
+            color: #909399;
+            margin-bottom: 30px;
+        }
+
+        /* 表单组 */
+        .input-group {
+            margin-bottom: 20px;
+            text-align: left;
+        }
+
+        .input-group label {
+            display: block;
+            font-size: 14px;
+            color: #606266;
+            margin-bottom: 8px;
+            font-weight: 500;
+        }
+
+        .input-group input {
+            width: 100%;
+            padding: 12px 15px;
+            border: 1.5px solid #dcdfe6;
+            border-radius: 10px;
+            font-size: 14px;
+            transition: all 0.3s;
+            outline: none;
+        }
+
+        /* 输入框聚焦时的饼干色高亮 */
+        .input-group input:focus {
+            border-color: #e6a23c;
+            box-shadow: 0 0 5px rgba(230, 162, 60, 0.3);
+        }
+
+        /* 记住我和忘记密码 */
+        .form-actions {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            font-size: 13px;
+            margin-bottom: 25px;
+        }
+
+        .remember-me {
+            display: flex;
+            align-items: center;
+            color: #606266;
+            cursor: pointer;
+        }
+
+        .remember-me input {
+            margin-right: 5px;
+            accent-color: #e6a23c;
+        }
+
+        .forgot-pass {
+            color: #e6a23c;
+            text-decoration: none;
+        }
+
+        .forgot-pass:hover {
+            text-decoration: underline;
+        }
+
+        /* 登录按钮：浓郁巧克力/焦糖色 */
+        .login-btn {
+            width: 100%;
+            padding: 12px;
+            background-color: #d47e20;
+            color: white;
+            border: none;
+            border-radius: 10px;
+            font-size: 16px;
+            font-weight: bold;
+            cursor: pointer;
+            transition: background-color 0.3s, transform 0.1s;
+        }
+
+        .login-btn:hover {
+            background-color: #b86b17;
+        }
+
+        .login-btn:active {
+            transform: scale(0.98);
+        }
+
+        /* 底部注册提示 */
+        .register-link {
+            margin-top: 25px;
+            font-size: 13px;
+            color: #909399;
+        }
+
+        .register-link a {
+            color: #d47e20;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        .register-link a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="login-container">
+        <div class="brand-logo">🍩 零食小铺</div>
+        <div class="brand-slogan">今天，也要犒劳一下挑剔的胃~</div>
+
+        <form action="#" method="POST">
+            <div class="input-group">
+                <label for="username">手机号 / 邮箱 / 账号</label>
+                <input type="text" id="username" name="username" placeholder="请输入您的账号" required>
+            </div>
+
+            <div class="input-group">
+                <label for="password">密码</label>
+                <input type="password" id="password" name="password" placeholder="请输入密码" required>
+            </div>
+
+            <div class="form-actions">
+                <label class="remember-me">
+                    <input type="checkbox" name="remember"> 记住我
+                </label>
+              <a href="register.html">立即注册新会员</a>
+            </div>
+
+            <button type="submit" class="login-btn">开启美味之旅</button>
+        </form>
