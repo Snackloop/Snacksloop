@@ -1,0 +1,435 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<title>供应商对接与选址考察汇报 (2026-07-09)</title>
+<style>
+  /* ============ SnackLoop x BaoPop Brand System ============
+     Brand Black 111111 / BaoPop Gold F5C842 / Neon Pink F0508C
+     Dark Gray 1C1C1C card fill / Mid Gray 2A2A2A subtle fill
+     Font: Arial (Fredoka substitute)
+     Fixed-width, non-responsive canvas — same layout on phone / tablet / desktop
+  ============================================================ */
+
+  html{background:#0a0a0a;}
+  body{
+    margin:0;
+    background:#111111;
+    color:#ffffff;
+    font-family:Arial, "PingFang SC", "Microsoft YaHei", sans-serif;
+    line-height:1.75;
+  }
+
+  /* fixed-width canvas: no media queries, browser handles zoom/scroll on small screens */
+  .canvas{
+    width:1080px;
+    margin:0 auto;
+    padding:0 0 80px;
+  }
+
+  /* ---------- Logo bar ---------- */
+  .logo-bar{
+    padding:26px 60px;
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    border-bottom:1px solid #2A2A2A;
+  }
+  .logo{
+    font-size:26px;
+    font-weight:bold;
+    letter-spacing:.01em;
+  }
+  .logo .snack{color:#ffffff;}
+  .logo .loop{color:#F5C842;}
+  .logo .x{color:#ffffff; font-weight:normal; margin:0 10px; font-size:20px;}
+  .logo .baopop{color:#F0508C;}
+  .logo-tag{
+    font-size:11px;
+    color:#CCCCCC;
+    letter-spacing:.25em;
+    text-transform:uppercase;
+  }
+
+  /* ---------- Cover ---------- */
+  header.cover{
+    text-align:center;
+    padding:70px 60px 60px;
+    position:relative;
+  }
+  header.cover .eyebrow{
+    letter-spacing:.4em;
+    font-size:12px;
+    color:#F0508C;
+    text-transform:uppercase;
+    font-weight:bold;
+  }
+  header.cover h1{
+    font-size:40px;
+    margin:18px 0 10px;
+    color:#F5C842;
+    font-weight:bold;
+    letter-spacing:.02em;
+  }
+  header.cover .date{
+    color:#CCCCCC;
+    font-size:14px;
+  }
+  .gold-rule{
+    height:3px;
+    width:100%;
+    background:#F5C842;
+    margin-top:34px;
+  }
+
+  section{padding:56px 60px;}
+  section + section{border-top:1px solid #2A2A2A;}
+
+  h2.section-title{
+    font-size:24px;
+    display:flex;
+    align-items:center;
+    gap:14px;
+    margin:0 0 30px;
+    color:#F5C842;
+    font-weight:bold;
+  }
+  h2.section-title .num{
+    font-size:13px;
+    color:#111111;
+    background:#F5C842;
+    padding:5px 12px;
+    border-radius:4px;
+    font-weight:bold;
+  }
+
+  h3.sub-title{
+    font-size:17px;
+    margin:40px 0 18px;
+    color:#F0508C;
+    font-weight:bold;
+  }
+
+  /* ---------- Tables ---------- */
+  table{
+    width:100%;
+    border-collapse:collapse;
+    margin:18px 0 8px;
+    font-size:14px;
+    background:#1C1C1C;
+    border-radius:6px;
+    overflow:hidden;
+  }
+  th,td{
+    border:1px solid #2A2A2A;
+    padding:13px 16px;
+    text-align:left;
+    vertical-align:top;
+    color:#ffffff;
+  }
+  th{
+    background:#2A2A2A;
+    color:#F5C842;
+    font-weight:bold;
+    white-space:nowrap;
+  }
+  td{color:#CCCCCC;}
+
+  /* ---------- Status / observation boxes ---------- */
+  .status-box{
+    background:#1C1C1C;
+    border-left:4px solid #F0508C;
+    border-radius:0 6px 6px 0;
+    padding:18px 22px;
+    margin:20px 0;
+    font-size:14px;
+  }
+  .status-box p{margin:6px 0; color:#CCCCCC;}
+  .status-box strong{color:#F5C842;}
+
+  .observ{
+    font-size:14px;
+    background:#1C1C1C;
+    border:1px solid #2A2A2A;
+    border-radius:8px;
+    padding:20px 24px;
+    margin:18px 0 26px;
+  }
+  .observ p{margin:9px 0; color:#CCCCCC;}
+  .observ b{color:#F0508C;}
+
+  /* ---------- Image gallery (fixed columns, no reflow) ---------- */
+  .gallery{
+    display:table;
+    width:100%;
+    border-spacing:14px;
+    margin:20px -14px 8px;
+  }
+  .gallery-row{display:table-row;}
+  .gallery-cell{
+    display:table-cell;
+    width:33.33%;
+  }
+  .gallery figure{margin:0;}
+  .gallery img{
+    width:100%;
+    height:230px;
+    object-fit:cover;
+    border-radius:6px;
+    display:block;
+    border:1px solid #2A2A2A;
+  }
+  figcaption{
+    font-size:11.5px;
+    color:#999999;
+    text-align:center;
+    margin-top:6px;
+  }
+
+  /* ---------- Video ---------- */
+  .video-block{
+    margin:24px 0 8px;
+    text-align:center;
+    background:#1C1C1C;
+    border:1px solid #2A2A2A;
+    border-radius:8px;
+    padding:24px;
+  }
+  .video-block video{
+    width:520px;
+    border-radius:6px;
+    background:#000;
+  }
+  .video-caption{
+    font-size:12.5px;
+    color:#999999;
+    margin-top:10px;
+  }
+
+  /* ---------- Two-column fixed layout ---------- */
+  .two-col{
+    display:table;
+    width:100%;
+    border-spacing:22px 0;
+    margin:20px -22px 0;
+  }
+  .two-col-row{display:table-row;}
+  .two-col-cell{
+    display:table-cell;
+    width:50%;
+    vertical-align:top;
+  }
+  .two-col figure{margin:0;}
+  .two-col img{
+    width:100%;
+    border-radius:6px;
+    border:1px solid #2A2A2A;
+    display:block;
+  }
+
+  .floorplan-note{
+    font-size:12.5px;
+    color:#999999;
+    margin-top:18px;
+  }
+
+  footer{
+    text-align:center;
+    font-size:12px;
+    color:#666666;
+    padding:36px 60px 0;
+  }
+  footer .foot-logo{margin-bottom:8px;}
+  footer .foot-logo .snack{color:#ffffff; font-weight:bold;}
+  footer .foot-logo .loop{color:#F5C842; font-weight:bold;}
+</style>
+</head>
+<body>
+<div class="canvas">
+
+  <div class="logo-bar">
+    <div class="logo"><span class="snack">Snack</span><span class="loop">Loop</span><span class="x">×</span><span class="baopop">BaoPop</span></div>
+    <div class="logo-tag">Internal Report</div>
+  </div>
+
+  <header class="cover">
+    <div class="eyebrow">供应商对接与选址考察</div>
+    <h1>供应商对接与选址考察汇报</h1>
+    <div class="date">2026年7月9日</div>
+    <div class="gold-rule"></div>
+  </header>
+
+  <!-- 一、供应商考察总结 -->
+  <section id="suppliers">
+    <h2 class="section-title"><span class="num">一</span>供应商考察总结</h2>
+
+    <table>
+      <thead>
+        <tr>
+          <th>供应商名称</th>
+          <th>主营业务</th>
+          <th>核心优势</th>
+          <th>合作政策</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Worldwide Snacks Inc</td>
+          <td>日韩台及中国潮流零食</td>
+          <td>全球网红爆品；"多多"渠道专供冰淇淋</td>
+          <td>满 $500 享一年免费冰柜租赁；满 $500 免费送货及卸货</td>
+        </tr>
+        <tr>
+          <td>Jayone Foods, Inc</td>
+          <td>韩国食品（大宗供应）</td>
+          <td>品类丰富，仓库规模巨大，深耕大超市场</td>
+          <td>经理 Anna（中文对接）；装修期间将实地指导选品</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <div class="status-box">
+      <p><strong>执行状态</strong></p>
+      <p>· Worldwide Snacks：已获取完整产品清单及定价，目前可直接进行采购决策。</p>
+      <p>· Jayone Foods：已获取产品手册，后续需确认具体采购意向清单（Purchase Order）后进行最终询价。</p>
+    </div>
+
+    <h3 class="sub-title">Worldwide Snacks Inc — 仓库 / 冰柜展示样机</h3>
+    <div class="gallery">
+      <div class="gallery-row">
+        <div class="gallery-cell">
+          <figure>
+            <img src="images/supplier1_01.jpg" alt="Worldwide Snacks 仓库冰柜展示">
+            <figcaption>仓库货架与冰淇淋展示柜</figcaption>
+          </figure>
+        </div>
+        <div class="gallery-cell">
+          <figure>
+            <img src="images/supplier1_02.jpg" alt="Worldwide Snacks 仓库全景">
+            <figcaption>仓库货架全景（Oreo 等货品）</figcaption>
+          </figure>
+        </div>
+        <div class="gallery-cell">
+          <figure>
+            <img src="images/supplier1_03.jpg" alt="Worldwide Snacks 冰柜特写">
+            <figcaption>"Imported Ice Cream" 品牌冰柜特写</figcaption>
+          </figure>
+        </div>
+      </div>
+    </div>
+
+    <h3 class="sub-title">Jayone Foods, Inc — 实地考察视频</h3>
+    <div class="video-block">
+      <video controls preload="metadata">
+        <source src="video/supplier2_jayone.mov" type="video/quicktime">
+        <source src="video/supplier2_jayone.mov" type="video/mp4">
+        您的浏览器不支持内嵌视频播放，请直接打开 video/supplier2_jayone.mov 文件查看。
+      </video>
+      <div class="video-caption">Jayone Foods 仓库实地考察视频</div>
+    </div>
+  </section>
+
+  <!-- 二、选址考察：The Source OC -->
+  <section id="site-visit">
+    <h2 class="section-title"><span class="num">二</span>选址考察：The Source OC</h2>
+
+    <div class="observ">
+      <p><b>流量特征：</b>下午4点至5点考察。4点场内人流平稳，5点后观察到人流量显著增加，符合韩区商圈消费习惯。</p>
+      <p><b>同业对标：</b>场内 Seoul Stop x ArtBox 经营状况火爆，具备强力的客流吸引力。</p>
+      <p><b>楼层业态：</b>一二楼以商店为主，三楼为餐厅。</p>
+    </div>
+
+    <h3 class="sub-title">The Source OC — 商场俯拍全景</h3>
+    <div class="two-col">
+      <div class="two-col-row">
+        <div class="two-col-cell">
+          <figure>
+            <img src="images/mall_overview.jpg" alt="The Source OC 商场俯拍全景">
+            <figcaption>商场中庭俯拍全景：一二楼以商店为主，三楼为餐厅</figcaption>
+          </figure>
+        </div>
+        <div class="two-col-cell"></div>
+      </div>
+    </div>
+
+    <h3 class="sub-title">Seoul Stop x ArtBox 店内实拍</h3>
+    <div class="gallery">
+      <div class="gallery-row">
+        <div class="gallery-cell"><figure><img src="images/store_01.jpg" alt="店内实拍1"><figcaption>Pepero / 零食陈列区</figcaption></figure></div>
+        <div class="gallery-cell"><figure><img src="images/store_02.jpg" alt="店内实拍2"><figcaption>结账区（Seoul Station 主题）</figcaption></figure></div>
+        <div class="gallery-cell"><figure><img src="images/store_03.jpg" alt="店内实拍3"><figcaption>Seoul Popup 出口通道</figcaption></figure></div>
+      </div>
+      <div class="gallery-row">
+        <div class="gallery-cell"><figure><img src="images/store_04.jpg" alt="店内实拍4"><figcaption>"Your Next Arrival" 主题打卡区</figcaption></figure></div>
+        <div class="gallery-cell"><figure><img src="images/store_05.jpg" alt="店内实拍5"><figcaption>入口 ARTBOX 联名陈列</figcaption></figure></div>
+        <div class="gallery-cell"><figure><img src="images/store_06.jpg" alt="店内实拍6"><figcaption>Paldo 拉面 / 冷藏食品区</figcaption></figure></div>
+      </div>
+      <div class="gallery-row">
+        <div class="gallery-cell"><figure><img src="images/store_07.jpg" alt="店内实拍7"><figcaption>护肤美妆专区</figcaption></figure></div>
+        <div class="gallery-cell"><figure><img src="images/store_08.jpg" alt="店内实拍8"><figcaption>BT21 / Line Friends 周边区</figcaption></figure></div>
+        <div class="gallery-cell"><figure><img src="images/store_09.jpg" alt="店内实拍9"><figcaption>便利店餐台（Seoul Stop 편의점）</figcaption></figure></div>
+      </div>
+      <div class="gallery-row">
+        <div class="gallery-cell"><figure><img src="images/store_10.jpg" alt="店内实拍10"><figcaption>联名环保袋展示</figcaption></figure></div>
+        <div class="gallery-cell"><figure><img src="images/store_11.jpg" alt="店内实拍11"><figcaption>门店外立面招牌</figcaption></figure></div>
+        <div class="gallery-cell"><figure><img src="images/store_12.jpg" alt="店内实拍12"><figcaption>压俱亭站主题外摆休息区</figcaption></figure></div>
+      </div>
+      <div class="gallery-row">
+        <div class="gallery-cell"><figure><img src="images/store_13.jpg" alt="店内实拍13"><figcaption>门店内部整体陈列</figcaption></figure></div>
+        <div class="gallery-cell"></div>
+        <div class="gallery-cell"></div>
+      </div>
+    </div>
+
+    <h3 class="sub-title">空置店铺信息</h3>
+    <table>
+      <thead>
+        <tr>
+          <th>位置</th>
+          <th>面积 (sq.ft)</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr><td>一楼</td><td>2,352</td></tr>
+        <tr><td>一楼</td><td>1,110</td></tr>
+        <tr><td>一楼</td><td>1,147</td></tr>
+        <tr><td>二楼</td><td>3,174</td></tr>
+        <tr><td>二楼</td><td>1,251</td></tr>
+      </tbody>
+    </table>
+
+    <div class="two-col">
+      <div class="two-col-row">
+        <div class="two-col-cell">
+          <figure>
+            <img src="images/floorplan_01_2ndfloor.jpg" alt="The Source OC 2nd Floor Plan">
+            <figcaption>2nd Floor Plan — 二楼平面图（空置铺位以绿框标示）</figcaption>
+          </figure>
+        </div>
+        <div class="two-col-cell">
+          <figure>
+            <img src="images/floorplan_02_1stfloor.jpg" alt="The Source OC 1st Floor Plan">
+            <figcaption>1st Floor Plan — 一楼平面图</figcaption>
+          </figure>
+        </div>
+      </div>
+      <div class="two-col-row">
+        <div class="two-col-cell">
+          <figure>
+            <img src="images/floorplan_03_1stfloor_detail.jpg" alt="1st Floor Plan 标注细节">
+            <figcaption>一楼平面图 — 现场标注细节（候选铺位圈出）</figcaption>
+          </figure>
+        </div>
+        <div class="two-col-cell"></div>
+      </div>
+    </div>
+    <p class="floorplan-note">注：平面图尺寸以物业方 2026/2/26 版本为准，最终面积以实测为准。</p>
+  </section>
+
+  <footer>
+    <div class="foot-logo"><span class="snack">Snack</span><span class="loop">Loop</span></div>
+    供应商对接与选址考察汇报 · 2026-07-09 · 内部资料，请勿外传
+  </footer>
+</div>
+</body>
+</html>
