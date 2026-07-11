@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<title>本周工作周报（2026年7月6日–7月10日）</title>
+<style>
+  /* ============ SnackLoop x BaoPop Brand System ============
+     Brand Black 111111 / BaoPop Gold F5C842 / Neon Pink F0508C
+     Dark Gray 1C1C1C card fill / Mid Gray 2A2A2A subtle fill
+     Font: Arial (Fredoka substitute)
+     Fixed-width, non-responsive canvas — same layout on phone / tablet / desktop
+  ============================================================ */
+
+  html{background:#0a0a0a;}
+  body{
+    margin:0;
+    background:#111111;
+    color:#ffffff;
+    font-family:Arial, "PingFang SC", "Microsoft YaHei", sans-serif;
+    line-height:1.8;
+  }
+
+  .canvas{
+    width:1080px;
+    margin:0 auto;
+    padding:0 0 80px;
+  }
+
+  .logo-bar{
+    padding:26px 60px;
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    border-bottom:1px solid #2A2A2A;
+  }
+  .logo{
+    font-size:26px;
+    font-weight:bold;
+    letter-spacing:.01em;
+  }
+  .logo .snack{color:#ffffff;}
+  .logo .loop{color:#F5C842;}
+  .logo .x{color:#ffffff; font-weight:normal; margin:0 10px; font-size:20px;}
+  .logo .baopop{color:#F0508C;}
+  .logo-tag{
+    font-size:11px;
+    color:#CCCCCC;
+    letter-spacing:.25em;
+    text-transform:uppercase;
+  }
+
+  header.cover{
+    text-align:center;
+    padding:70px 60px 60px;
+  }
+  header.cover .eyebrow{
+    letter-spacing:.4em;
+    font-size:12px;
+    color:#F0508C;
+    text-transform:uppercase;
+    font-weight:bold;
+  }
+  header.cover h1{
+    font-size:38px;
+    margin:18px 0 10px;
+    color:#F5C842;
+    font-weight:bold;
+    letter-spacing:.02em;
+  }
+  header.cover .date{
+    color:#CCCCCC;
+    font-size:14px;
+  }
+  .gold-rule{
+    height:3px;
+    width:100%;
+    background:#F5C842;
+    margin-top:34px;
+  }
+
+  section{padding:56px 60px;}
+  section + section{border-top:1px solid #2A2A2A;}
+
+  .person-header{
+    display:flex;
+    align-items:center;
+    gap:16px;
+    margin-bottom:6px;
+  }
+  .avatar{
+    width:52px;
+    height:52px;
+    border-radius:50%;
+    background:#2A2A2A;
+    color:#F5C842;
+    font-weight:bold;
+    font-size:20px;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    border:2px solid #F5C842;
+    flex-shrink:0;
+  }
+  .person-header.pink .avatar{border-color:#F0508C; color:#F0508C;}
+  .person-meta h2{
+    margin:0;
+    font-size:24px;
+    color:#F5C842;
+    font-weight:bold;
+  }
+  .person-header.pink .person-meta h2{color:#F0508C;}
+  .person-meta .role{
+    font-size:12.5px;
+    color:#999999;
+    margin-top:3px;
+  }
+
+  .period-tag{
+    display:inline-block;
+    background:#1C1C1C;
+    border:1px solid #2A2A2A;
+    color:#CCCCCC;
+    font-size:12px;
+    padding:5px 12px;
+    border-radius:20px;
+    margin:18px 0 30px;
+  }
+
+  h3.item-title{
+    font-size:16.5px;
+    color:#F5C842;
+    font-weight:bold;
+    margin:28px 0 10px;
+    display:flex;
+    align-items:center;
+    gap:10px;
+  }
+  .person-header.pink ~ .period-tag ~ h3.item-title,
+  section.zhao h3.item-title{color:#F0508C;}
+
+  h3.item-title .tag-joint{
+    font-size:10.5px;
+    font-weight:normal;
+    background:#F0508C;
+    color:#ffffff;
+    padding:2px 9px;
+    border-radius:10px;
+    letter-spacing:.05em;
+  }
+  section.zhao h3.item-title .tag-joint{background:#F5C842; color:#111111;}
+
+  .item-body{
+    font-size:14px;
+    color:#CCCCCC;
+    background:#1C1C1C;
+    border:1px solid #2A2A2A;
+    border-radius:8px;
+    padding:16px 20px;
+    margin:0;
+  }
+
+  .next-plan{
+    margin-top:34px;
+    background:#1C1C1C;
+    border-left:4px solid #F5C842;
+    border-radius:0 6px 6px 0;
+    padding:18px 22px;
+  }
+  section.zhao .next-plan{border-left-color:#F0508C;}
+  .next-plan .label{
+    font-size:13px;
+    font-weight:bold;
+    color:#F5C842;
+    margin-bottom:8px;
+  }
+  section.zhao .next-plan .label{color:#F0508C;}
+  .next-plan p{
+    font-size:14px;
+    color:#CCCCCC;
+    margin:0;
+  }
+
+  footer{
+    text-align:center;
+    font-size:12px;
+    color:#666666;
+    padding:36px 60px 0;
+  }
+  footer .foot-logo{margin-bottom:8px;}
+  footer .foot-logo .snack{color:#ffffff; font-weight:bold;}
+  footer .foot-logo .loop{color:#F5C842; font-weight:bold;}
+</style>
+</head>
+<body>
+<div class="canvas">
+
+  <div class="logo-bar">
+    <div class="logo"><span class="snack">Snack</span><span class="loop">Loop</span><span class="x">×</span><span class="baopop">BaoPop</span></div>
+    <div class="logo-tag">Weekly Report</div>
+  </div>
+
+  <header class="cover">
+    <div class="eyebrow">本周工作周报</div>
+    <h1>团队周报汇总</h1>
+    <div class="date">2026年7月6日 — 7月10日</div>
+    <div class="gold-rule"></div>
+  </header>
+
+  <!-- 小林周报 -->
+  <section id="xiaolin">
+    <div class="person-header">
+      <div class="avatar">林</div>
+      <div class="person-meta">
+        <h2>小林 — 本周工作周报</h2>
+        <div class="role">采购 / 供应商对接</div>
+      </div>
+    </div>
+    <div class="period-tag">2026年7月6日 — 7月10日</div>
+
+    <h3 class="item-title">一、物料工厂寻源与比价</h3>
+    <p class="item-body">本周开展物料工厂寻找工作，联系并对比了多家工厂的报价方案，就具体物料需求（规格、数量、交期等）与工厂进行了沟通确认，为后续物料采购决策积累了报价参考。</p>
+
+    <h3 class="item-title">二、供应商实地考察与核价</h3>
+    <p class="item-body">前往供应商仓库进行实地考察，实地了解产品品类、包装规格、库存及供货能力，并对报价逐项进行了核实比对，确保采购成本符合预期。</p>
+
+    <h3 class="item-title">三、商场选址考察</h3>
+    <p class="item-body">前往一家商场进行了实地选址考察，了解商场整体业态分布、招商情况以及空置铺位的位置和面积信息，为后续选址决策提供依据。</p>
+
+    <h3 class="item-title">四、周五联合考察 <span class="tag-joint">与小赵共同完成</span></h3>
+    <p class="item-body">周五与小赵共同前往 Seoul Stop 进行实地考察，重点了解店内产品结构、品牌陈列方式及经营模式；随后一同前往商场进行店铺选址考察，记录了候选店铺的位置、人流、面积及周边商户情况。具体考察内容详见下方小赵周报部分。</p>
+
+    <div class="next-plan">
+      <div class="label">下周计划</div>
+      <p>继续跟进物料工厂报价对比结果，推进供应商核价与采购决策；结合本周选址考察信息，进一步比较候选店铺条件，跟进商场招商方沟通。</p>
+    </div>
+  </section>
+
+  <!-- 小赵周报 -->
+  <section id="xiaozhao" class="zhao">
+    <div class="person-header pink">
+      <div class="avatar">赵</div>
+      <div class="person-meta">
+        <h2>小赵 — 本周工作周报</h2>
+        <div class="role">供应商拓展 / 渠道申请</div>
+      </div>
+    </div>
+    <div class="period-tag">2026年7月6日 — 7月10日</div>
+
+    <p class="item-body" style="margin-bottom:24px;">本周主要围绕供应商考察、采购渠道申请以及店铺选址开展工作。</p>
+
+    <h3 class="item-title">一、批发商实地考察</h3>
+    <p class="item-body">本周前往多家批发商进行实地考察，主要了解各批发商的经营规模、产品种类、品牌情况、起订要求以及是否对外开放。通过现场考察，对不同供应商的产品定位和合作方式有了更直观的了解，也为后续筛选合适的供货渠道提供了参考。</p>
+
+    <h3 class="item-title">二、批发商线上申请</h3>
+    <p class="item-body">针对部分不对外开放或需要提前审核的批发商，完成了线上申请表的填写和资料提交。目前正在等待相关批发商的审核和回复，后续会继续跟进申请进度，并进一步了解开户、报价和采购要求。</p>
+
+    <h3 class="item-title">三、Seoul Stop 实地考察 <span class="tag-joint">与小林共同完成</span></h3>
+    <p class="item-body">前往 Seoul Stop 进行了实地考察，重点了解店内的产品结构、日韩零食品牌、商品陈列方式、价格区间以及整体经营模式。通过对现场商品和陈列的观察，收集了部分可以参考的产品和运营思路。</p>
+
+    <h3 class="item-title">四、商场店面考察 <span class="tag-joint">与小林共同完成</span></h3>
+    <p class="item-body">前往商场寻找并考察了几家合适的店面，主要查看店铺位置、人流情况、面积、周边商户类型以及是否适合经营零食和盲盒项目。同时记录了部分店面的基本信息，后续会继续联系商场或招商负责人，进一步了解租金、管理费和租赁条件。</p>
+
+    <div class="next-plan">
+      <div class="label">下周计划</div>
+      <p>继续跟进批发商线上申请结果，整理实地考察收集到的供应商和产品信息，并继续寻找合适的店面。同时对已找到的店铺进行进一步比较，了解具体租赁条件和项目入驻要求。</p>
+    </div>
+  </section>
+
+  <footer>
+    <div class="foot-logo"><span class="snack">Snack</span><span class="loop">Loop</span></div>
+    团队周报汇总 · 2026年7月6日–7月10日 · 内部资料，请勿外传
+  </footer>
+</div>
+</body>
+</html>
