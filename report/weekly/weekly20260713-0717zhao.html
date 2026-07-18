@@ -1,0 +1,383 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<title>SnackLoop 周报 · 7/13–7/17</title>
+<style>
+  :root {
+    --navy: #1F4E79;
+    --navy-light: #2E6DA4;
+    --bg: #FBFBFA;
+    --card: #FFFFFF;
+    --line: #E3E3E0;
+    --text: #2B2B28;
+    --muted: #6B6B66;
+    --green: #E6F0E6;
+    --green-text: #2E5E2E;
+    --amber: #FDF3DA;
+    --amber-text: #8A6200;
+    --flag: #C00000;
+    --flag-bg: #FDECEC;
+  }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0;
+    background: var(--bg);
+    color: var(--text);
+    font-family: "Segoe UI", "PingFang SC", "Microsoft YaHei", Helvetica, Arial, sans-serif;
+    line-height: 1.6;
+  }
+  .page {
+    max-width: 980px;
+    margin: 0 auto;
+    padding: 48px 40px 80px;
+  }
+  header.doc-header {
+    border-bottom: 3px solid var(--navy);
+    padding-bottom: 20px;
+    margin-bottom: 28px;
+  }
+  h1.title {
+    font-size: 30px;
+    margin: 0 0 8px;
+    color: var(--navy);
+    letter-spacing: 0.3px;
+  }
+  .meta {
+    color: var(--muted);
+    font-size: 14px;
+    margin: 0 0 6px;
+  }
+  .note {
+    color: var(--muted);
+    font-size: 13px;
+    font-style: italic;
+    margin: 0;
+  }
+  h2.section {
+    font-size: 20px;
+    color: var(--navy);
+    border-left: 5px solid var(--navy);
+    padding-left: 12px;
+    margin: 40px 0 16px;
+  }
+  h3.sub {
+    font-size: 16px;
+    color: var(--navy-light);
+    margin: 20px 0 8px;
+  }
+  .label {
+    font-weight: 600;
+    font-size: 14.5px;
+    margin: 16px 0 6px;
+    color: var(--text);
+  }
+  p.body-text {
+    font-size: 14.5px;
+    margin: 0 0 10px;
+  }
+  .placeholder {
+    font-size: 14.5px;
+    font-style: italic;
+    color: var(--flag);
+    background: var(--flag-bg);
+    border-left: 3px solid var(--flag);
+    padding: 8px 12px;
+    border-radius: 3px;
+    margin: 0 0 10px;
+  }
+  .summary-card {
+    background: var(--card);
+    border: 1px solid var(--line);
+    border-radius: 8px;
+    padding: 4px;
+    margin-bottom: 8px;
+  }
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 10px 0 20px;
+    font-size: 13.5px;
+    background: var(--card);
+  }
+  caption {
+    text-align: left;
+    font-weight: 600;
+    padding: 6px 0;
+    color: var(--navy);
+  }
+  th {
+    background: var(--navy);
+    color: #fff;
+    text-align: left;
+    padding: 9px 10px;
+    font-weight: 600;
+    font-size: 13px;
+  }
+  td {
+    padding: 8px 10px;
+    border-bottom: 1px solid var(--line);
+    vertical-align: top;
+  }
+  tr:nth-child(even) td { background: #F5F6F5; }
+  .status-pill {
+    display: inline-block;
+    padding: 2px 10px;
+    border-radius: 999px;
+    font-size: 12.5px;
+    font-weight: 600;
+  }
+  .status-progress { background: var(--amber); color: var(--amber-text); }
+  .status-done { background: var(--green); color: var(--green-text); }
+  .status-pending { background: #F0F0EE; color: var(--muted); }
+  .deliverable-table td:first-child { font-weight: 600; white-space: nowrap; }
+  .flag-badge {
+    display: inline-block;
+    font-size: 11px;
+    font-weight: 700;
+    color: #fff;
+    background: var(--flag);
+    padding: 1px 8px;
+    border-radius: 4px;
+    margin-right: 6px;
+    vertical-align: middle;
+  }
+  .reflection-box {
+    background: var(--card);
+    border: 1px solid var(--line);
+    border-left: 5px solid var(--navy-light);
+    border-radius: 6px;
+    padding: 16px 20px;
+    font-size: 14.5px;
+  }
+  footer {
+    margin-top: 60px;
+    padding-top: 16px;
+    border-top: 1px solid var(--line);
+    color: var(--muted);
+    font-size: 12.5px;
+    text-align: center;
+  }
+  a { color: var(--navy-light); text-decoration: none; }
+  a:hover { text-decoration: underline; }
+  @media print {
+    body { background: #fff; }
+    .page { padding: 0 20px; }
+  }
+  @media (max-width: 640px) {
+    .page { padding: 24px 16px 60px; }
+    table { font-size: 12px; }
+    th, td { padding: 6px 8px; }
+  }
+</style>
+</head>
+<body>
+<div class="page">
+
+  <header class="doc-header">
+    <h1 class="title">SnackLoop 周报</h1>
+    <p class="meta">报告周期：2026年7月13日 – 7月17日　|　汇报人：Mason（采购）</p>
+    <p class="note">说明：本周报按《团队工作周报标准》执行，仅汇报 Mason 个人负责部分，其他团队成员工作由本人另行汇报。</p>
+  </header>
+
+  <h2 class="section">本周工作一览</h2>
+  <table>
+    <thead><tr><th style="width:22%">工作板块</th><th>本周进展</th><th style="width:16%">状态</th></tr></thead>
+    <tbody>
+      <tr><td>批发商开户</td><td>8家已开户可采购，21家审核中，累计对接供应商29家</td><td><span class="status-pill status-progress">推进中</span></td></tr>
+      <tr><td>批发商报价梳理</td><td>报价信息待补全，周一前完成电话确认并汇总</td><td><span class="status-pill status-pending">待完成</span></td></tr>
+      <tr><td>市政府合规咨询</td><td>完成一次现场咨询，了解装修许可基本流程</td><td><span class="status-pill status-done">已完成本周动作</span></td></tr>
+      <tr><td>装修团队沟通</td><td>已与装修团队初步对接（非本人主责事项）</td><td><span class="status-pill status-done">已完成本周动作</span></td></tr>
+      <tr><td>同行竞品考察</td><td>累计规划11家门店，本周新增考察多多零食新店</td><td><span class="status-pill status-progress">推进中</span></td></tr>
+    </tbody>
+  </table>
+
+  <h2 class="section">一、批发商开户与采购渠道搭建</h2>
+
+  <div class="label">1. 本周原定目标</div>
+  <p class="body-text">持续推进批发商开户申请，扩大可稳定下单的供应商网络，为零食及盲盒品类的正式采购做好准备。</p>
+
+  <div class="label">2. 实际完成结果和具体数字</div>
+  <p class="body-text">本周累计对接批发商29家，其中8家已完成开户审核、可直接下单采购，明细（含地址、官网）如下：</p>
+  <table>
+    <thead><tr><th style="width:5%">#</th><th style="width:28%">供应商名称</th><th style="width:37%">地址</th><th>官网</th></tr></thead>
+    <tbody>
+      <tr><td>1</td><td>Faire.com</td><td>线上批发平台，无实体地址</td><td>faire.com</td></tr>
+      <tr><td>2</td><td>Jay One Foods（Jayone Foods）</td><td>7212 Alondra Blvd, Paramount, CA 90723</td><td>jayonefoods.com</td></tr>
+      <tr><td>3</td><td>Wang Globalnet</td><td>2465 Fruitland Ave, Vernon, CA 90058</td><td>wangfood.com</td></tr>
+      <tr><td>4</td><td>Worldwide Snacks</td><td>Los Angeles, CA（门牌号需电话确认）</td><td>worldwidesnacksinc.com</td></tr>
+      <tr><td>5</td><td>Jack's Candy</td><td>Los Angeles, CA（门牌号需电话确认）</td><td>jackscandy.com</td></tr>
+      <tr><td>6</td><td>Rockman Company (USA) Inc.</td><td>12011 Smith Ave, Santa Fe Springs, CA 90670</td><td>rockmanusa.com</td></tr>
+      <tr><td>7</td><td>Roxy Trading Inc.</td><td>Southern California（门牌号需电话确认）</td><td>需电话确认</td></tr>
+      <tr><td>8</td><td>Clara 大型零食仓</td><td>需电话/实地确认（暂无公开资料）</td><td>需电话确认</td></tr>
+    </tbody>
+  </table>
+
+  <p class="body-text">另有21家已提交开户申请，正处于对方审核阶段，明细（含地址、官网）如下：</p>
+  <table>
+    <thead><tr><th style="width:5%">#</th><th style="width:28%">供应商名称</th><th style="width:37%">地址</th><th>官网</th></tr></thead>
+    <tbody>
+      <tr><td>1</td><td>Mutual Trading Co., Inc.</td><td>4200 Shirley Ave, El Monte, CA 91731</td><td>mutual.us</td></tr>
+      <tr><td>2</td><td>California Snack Foods</td><td>Los Angeles, CA（门牌号需电话确认）</td><td>需电话确认</td></tr>
+      <tr><td>3</td><td>Winneram International Inc.</td><td>South El Monte, CA 91733</td><td>需电话确认</td></tr>
+      <tr><td>4</td><td>Giant Union Co., Inc.</td><td>Whittier, CA（门牌号需电话确认）</td><td>需电话确认</td></tr>
+      <tr><td>5</td><td>H.C. Foods Co., Ltd.</td><td>Commerce, CA 90040</td><td>需电话确认</td></tr>
+      <tr><td>6</td><td>HK Galleria Wholesale</td><td>5801 S Malt Ave, Los Angeles, CA</td><td>需电话确认</td></tr>
+      <tr><td>7</td><td>JFC International Inc.</td><td>Los Angeles, CA</td><td>jfc.com</td></tr>
+      <tr><td>8</td><td>Kim Seng Company</td><td>6121 Randolph St, Commerce, CA 90040</td><td>kimsengusa.com</td></tr>
+      <tr><td>9</td><td>Maruhana USA</td><td>Los Angeles, CA（门牌号需电话确认）</td><td>需电话确认</td></tr>
+      <tr><td>10</td><td>N.A. Trading Company</td><td>Los Angeles, CA（门牌号需电话确认）</td><td>需电话确认</td></tr>
+      <tr><td>11</td><td>Oriental Food Bank Inc.</td><td>City of Commerce, Los Angeles, CA</td><td>orientalfoodbank.com</td></tr>
+      <tr><td>12</td><td>Well Luck Co., Inc.</td><td>需电话/官网确认</td><td>需电话确认</td></tr>
+      <tr><td>13</td><td>H & L Wholesale Food</td><td>需电话/官网确认</td><td>需电话确认</td></tr>
+      <tr><td>14</td><td>Cathay L.A. Inc.</td><td>1501 N. Main St, Los Angeles, CA 90012</td><td>cathayla.com</td></tr>
+      <tr><td>15</td><td>JEONG HWA USA</td><td>需电话/官网确认</td><td>需电话确认</td></tr>
+      <tr><td>16</td><td>LAX-C</td><td>1100 N Main St, Los Angeles, CA 90012</td><td>需电话确认（FB: laxcmarket）</td></tr>
+      <tr><td>17</td><td>Takaokaya USA, Inc.</td><td>5600 Bickett St, Vernon, CA 90058</td><td>takaokayausa.com</td></tr>
+      <tr><td>18</td><td>China Foods USA</td><td>需电话/官网确认</td><td>需电话确认</td></tr>
+      <tr><td>19</td><td>Gemini Food Corporation</td><td>City of Industry, CA</td><td>需电话确认</td></tr>
+      <tr><td>20</td><td>Wismettac Asian Foods, Inc.</td><td>Los Angeles, CA（全国分销网络）</td><td>需电话确认</td></tr>
+      <tr><td>21</td><td>Kika Goods</td><td>需电话/官网确认</td><td>wholesale.kikagoods.com</td></tr>
+    </tbody>
+  </table>
+
+  <div class="label">3. 关键结论及推荐意见</div>
+  <p class="body-text">已开户的8家供应商覆盖零食、盲盒两大核心品类，具备启动首批小额试单的条件，建议以此为主力渠道优先验证到货时效与货品质量，为后续正式铺货打基础。</p>
+  <p class="placeholder"><span class="flag-badge">待补充</span>目前尚未收齐各家完整报价单，无法就SKU覆盖、价格区间、起订量等维度做出横向对比结论，因此暂不推荐具体优先合作对象——待下周报价补齐后在下期周报中给出。</p>
+
+  <div class="label">4. 当前存在的问题</div>
+  <p class="body-text">部分批发商（尤其负责报价的销售）提供的报价单不够全面，未能完整覆盖SKU与价格区间，导致目前无法对21家待审核+8家已开户供应商做价格/交期横向对比，影响下一步选品与成本测算的精细化程度。</p>
+
+  <div class="label">5. 下周负责人 / 截止日期 / 交付内容</div>
+  <table class="deliverable-table">
+    <thead><tr><th style="width:15%">负责人</th><th style="width:25%">截止日期</th><th>交付内容</th></tr></thead>
+    <tbody>
+      <tr><td>Mason</td><td>7月20日（周一）下班前</td><td>逐一电话确认各批发商报价单，整理成完整的批发商报价对比表（含SKU范围、价格区间、起订量、交期），发给老板</td></tr>
+    </tbody>
+  </table>
+
+  <h2 class="section">二、市政府开店合规咨询</h2>
+
+  <div class="label">1. 本周原定目标</div>
+  <p class="body-text">了解店铺装修许可、营业执照等开店合规流程及所需材料，为后续装修施工排期做准备。</p>
+
+  <div class="label">2. 实际完成结果和具体数字</div>
+  <p class="body-text">本周已前往市政府相关部门完成一次现场咨询，初步了解了装修许可申请的大致流程方向。</p>
+  <p class="placeholder"><span class="flag-badge">待补充</span>具体咨询的部门名称、对接人、需提交的许可证件清单及审批周期尚未整理成文字记录，需下周补充完整。</p>
+
+  <div class="label">3. 关键结论及推荐意见</div>
+  <p class="placeholder"><span class="flag-badge">待补充</span>待补充书面材料后，给出装修许可申请的具体路径和时间预估。</p>
+
+  <div class="label">4. 当前存在的问题</div>
+  <p class="body-text">现场咨询获取的信息尚未系统整理成清单，暂无法确认是否已覆盖全部所需材料，存在遗漏风险，需尽快补充书面记录。</p>
+
+  <div class="label">5. 下周负责人 / 截止日期 / 交付内容</div>
+  <table class="deliverable-table">
+    <thead><tr><th style="width:15%">负责人</th><th style="width:25%">截止日期</th><th>交付内容</th></tr></thead>
+    <tbody>
+      <tr><td>Mason</td><td>【待补充具体日期】</td><td>整理市政府许可材料清单及审批时间表，形成书面文档</td></tr>
+    </tbody>
+  </table>
+
+  <h2 class="section">三、装修团队对接</h2>
+  <p class="body-text">本周期内与装修团队进行了一次初步沟通（装修事项非本人主要负责范畴，具体方案与报价进展由团队相关负责人另行汇报）。</p>
+
+  <h2 class="section">四、同行竞品考察</h2>
+
+  <div class="label">1. 本周原定目标</div>
+  <p class="body-text">实地考察同类零食/盲盒门店，获取价格、装修、陈列布局及运营模式参考。</p>
+
+  <div class="label">2. 实际完成结果和具体数字</div>
+  <p class="body-text">本周新增考察：多多零食新店（零食连锁新店），观察了价格体系、装修风格、整体布局与员工分工。</p>
+  <p class="body-text">累计已规划考察门店清单共11家（含本周新增），明细如下：</p>
+  <table>
+    <thead><tr><th style="width:10%">优先级</th><th style="width:16%">门店名称</th><th style="width:28%">地址</th><th style="width:16%">品类定位</th><th style="width:8%">评分</th><th>观察要点</th></tr></thead>
+    <tbody>
+      <tr><td>优先1</td><td>Kayson Store Snack Shop</td><td>225 Garvey Ave, Monterey Park, CA 91754</td><td>零食连锁</td><td>4.5</td><td>现金/Zelle结算模式；定价策略；包装日期标注方式</td></tr>
+      <tr><td>优先1</td><td>Miniso 名创优品</td><td>5650 Whittier Blvd, Commerce, CA 90022</td><td>大型连锁标杆(全品类)</td><td>5.0</td><td>SKU结构；陈列动线；坪效；盲盒/毛绒/文具/零食品类占比</td></tr>
+      <tr><td>优先1</td><td>Ebisu Life Store</td><td>300 W Main St Unit 120, Alhambra, CA 91801</td><td>日系零食+杂货</td><td>4.9</td><td>品类结构与SnackLoop最接近；零食+文具+美妆+扭蛋机组合</td></tr>
+      <tr><td>优先1</td><td>Imizzu Gift Shop</td><td>145 W Main St, Alhambra, CA 91801</td><td>盲盒+潮玩+体验</td><td>4.8</td><td>盲盒+娃娃机+拍照亭一体化体验设计</td></tr>
+      <tr><td>优先1</td><td>Daiso</td><td>140 W Valley Blvd Ste 180 B, San Gabriel, CA 91776</td><td>全球连锁标杆(全品类)</td><td>4.2</td><td>统一定价体系；规模化陈列与动线设计</td></tr>
+      <tr><td>优先1</td><td>Paper Cola</td><td>100 S Mission Dr, San Gabriel, CA 91776</td><td>动漫盲盒精品店</td><td>5.0</td><td>盲盒选品精细化；Smiski/Sonny Angel定价策略</td></tr>
+      <tr><td>次要</td><td>Top Canvas Alhambra</td><td>29 N Garfield Ave, Alhambra, CA 91801</td><td>盲盒</td><td>4.7</td><td>盲盒选品丰富、价格亲民</td></tr>
+      <tr><td>次要</td><td>Sanrio Surprises</td><td>5783 Rosemead Blvd, Temple City, CA 91780</td><td>Sanrio专营+盲盒</td><td>4.3</td><td>冷门角色SKU覆盖；溢价策略</td></tr>
+      <tr><td>次要</td><td>Neko Stop</td><td>400 S Baldwin Ave, Arcadia, CA 91007</td><td>商场盲盒店</td><td>4.8</td><td>商场引流结合玩法；正品授权卖点</td></tr>
+      <tr><td>次要</td><td>Harmmy Anime</td><td>220 W Valley Blvd #106, San Gabriel, CA 91776</td><td>一番赏+动漫盲盒</td><td>4.1</td><td>一番赏专营；周四仅4-8PM营业</td></tr>
+      <tr><td>本周新增</td><td>多多零食新店</td><td>【待补充地址】</td><td>零食连锁新店</td><td>【待补充】</td><td>价格体系、装修风格、整体布局与员工分工</td></tr>
+    </tbody>
+  </table>
+
+  <div class="label">3. 关键结论及推荐意见</div>
+  <p class="placeholder"><span class="flag-badge">待补充</span>多多零食新店的价格带、装修成本、人员配置等具体数据及照片将在跑完其余同行门店后统一整理，形成对比结论，一并发给老板。</p>
+
+  <div class="label">4. 当前存在的问题</div>
+  <p class="body-text">目前仅完成部分门店的实地考察，尚未形成横向对比数据，暂无法给出选品/定价/装修的综合建议。</p>
+
+  <div class="label">5. 下周负责人 / 截止日期 / 交付内容</div>
+  <table class="deliverable-table">
+    <thead><tr><th style="width:15%">负责人</th><th style="width:25%">截止日期</th><th>交付内容</th></tr></thead>
+    <tbody>
+      <tr><td>Mason</td><td>【待补充具体日期，视剩余门店考察进度而定】</td><td>完成全部剩余门店考察，整理照片及价格/装修/布局对比表，发给老板</td></tr>
+    </tbody>
+  </table>
+
+  <h2 class="section">五、附：下周计划联系的供应商名单（含地址/官网）</h2>
+
+  <h3 class="sub">盲盒及潮玩供应商（20家）</h3>
+  <table>
+    <thead><tr><th style="width:5%">#</th><th style="width:28%">供应商名称</th><th style="width:37%">地址</th><th>官网</th></tr></thead>
+    <tbody>
+      <tr><td>1</td><td>Unik Toyz Trading Inc.</td><td>316 E 4th St, Los Angeles, CA 90013</td><td>需电话确认</td></tr>
+      <tr><td>2</td><td>Compita Gift & Toy</td><td>408 Wall St, Los Angeles, CA 90013</td><td>需电话确认</td></tr>
+      <tr><td>3</td><td>Giant Toys Imports</td><td>311 E 4th St, Los Angeles, CA 90013</td><td>需电话确认</td></tr>
+      <tr><td>4</td><td>Trade Inc.</td><td>325 E 4th St, Los Angeles, CA 90013</td><td>latcinc.com</td></tr>
+      <tr><td>5</td><td>M & J Toys</td><td>507 Towne Ave, Los Angeles, CA 90013</td><td>mjtoysinc.com</td></tr>
+      <tr><td>6</td><td>Yueh Feng Enterprise</td><td>219 Winston St, Los Angeles, CA 90013</td><td>需电话确认</td></tr>
+      <tr><td>7</td><td>K C N Toy Co.</td><td>411 Wall St, Los Angeles, CA 90013</td><td>需电话确认</td></tr>
+      <tr><td>8</td><td>Beecrazee Inc.</td><td>1527 Newton St, Los Angeles, CA 90021</td><td>需电话确认</td></tr>
+      <tr><td>9</td><td>B & B Toymaker Corporation</td><td>260 S Los Angeles St, Los Angeles, CA 90012</td><td>需电话确认</td></tr>
+      <tr><td>10</td><td>P W Woo & Sons Inc</td><td>630 S San Pedro St, Los Angeles, CA 90014</td><td>需电话确认</td></tr>
+      <tr><td>11</td><td>Mirage Import Inc</td><td>229 E 4th St, Los Angeles, CA 90013</td><td>需电话确认</td></tr>
+      <tr><td>12</td><td>ABC Toys</td><td>323 E 4th St, Los Angeles, CA 90013</td><td>abctoy4me.com</td></tr>
+      <tr><td>13</td><td>Winston Toy Sales</td><td>327 Winston St, Los Angeles, CA 90013</td><td>需电话确认</td></tr>
+      <tr><td>14</td><td>Smarty Toys Inc</td><td>2424 E 12th St, Los Angeles, CA 90021</td><td>需电话确认</td></tr>
+      <tr><td>15</td><td>M S Toys</td><td>315 E 7th St, Los Angeles, CA 90014</td><td>需电话确认</td></tr>
+      <tr><td>16</td><td>WACKO Los Angeles</td><td>4633 Hollywood Blvd, Los Angeles, CA 90027</td><td>wackola.com</td></tr>
+      <tr><td>17</td><td>Kouhigh Toys</td><td>Los Angeles, CA（具体地址需邮件确认）</td><td>kouhightoys.com</td></tr>
+      <tr><td>18</td><td>Entertainment Earth / EE Distribution</td><td>Simi Valley, CA</td><td>entertainmentearth.com</td></tr>
+      <tr><td>19</td><td>Dreams USA, Inc.</td><td>2 Charles Street Unit 3B, Providence, RI 02904</td><td>sonnyangelusa.com</td></tr>
+      <tr><td>20</td><td>TOPTOY</td><td>无公开美国实体地址</td><td>gotoptoy.com</td></tr>
+    </tbody>
+  </table>
+
+  <h3 class="sub">零食供应商（13家）</h3>
+  <table>
+    <thead><tr><th style="width:5%">#</th><th style="width:28%">供应商名称</th><th style="width:37%">地址</th><th>官网</th></tr></thead>
+    <tbody>
+      <tr><td>1</td><td>Sho International / Hite USA</td><td>Los Angeles, CA（已有联系人Mary）</td><td>shoint.com</td></tr>
+      <tr><td>2</td><td>Daesang America</td><td>City of Industry, CA</td><td>需电话确认</td></tr>
+      <tr><td>3</td><td>Seoul Trading Inc.</td><td>Los Angeles, CA</td><td>需电话确认</td></tr>
+      <tr><td>4</td><td>Supreme Foods, Inc.</td><td>City of Industry, CA 91744</td><td>需电话确认</td></tr>
+      <tr><td>5</td><td>Korean Farm, Inc.</td><td>Irwindale, CA 91706</td><td>需电话确认</td></tr>
+      <tr><td>6</td><td>Ottogi America, Inc.</td><td>La Mirada, CA 90638</td><td>需电话确认</td></tr>
+      <tr><td>7</td><td>C.J. Foods, Inc.</td><td>La Palma, CA 90623</td><td>需电话确认</td></tr>
+      <tr><td>8</td><td>Walong Marketing Inc.</td><td>Los Angeles, CA（全国设仓）</td><td>需电话确认</td></tr>
+      <tr><td>9</td><td>L.A. Lucky Import Export, Inc.</td><td>Bell, CA 90201</td><td>需电话确认</td></tr>
+      <tr><td>10</td><td>SnackFever, Inc.</td><td>3470 Wilshire Blvd Ste 535, Los Angeles, CA 90010</td><td>snackfever.com</td></tr>
+      <tr><td>11</td><td>MexMax</td><td>7250 Oxford Way, Commerce, CA 90040</td><td>mexmax.com</td></tr>
+      <tr><td>12</td><td>TJ Candy</td><td>6079 Rickenbacker Rd, Commerce, CA 90040</td><td>tjcandy.com</td></tr>
+      <tr><td>13</td><td>Super Wholesale LA</td><td>Los Angeles, CA（门牌号需官网确认）</td><td>superwholesalela.com</td></tr>
+    </tbody>
+  </table>
+
+  <h2 class="section">六、自我反思</h2>
+  <div class="reflection-box">
+    <p class="body-text">本周整体推进节奏偏慢，反思下来主要原因是把较多时间花在了整理和填写各类表格（供应商清单、地址核对、竞品考察表等）上，用于实际电话沟通、现场拜访和推动关键决策（如报价确认、装修方案敲定）的时间相对被压缩，导致部分事项（如批发商报价、装修报价、市政府材料清单）本周未能拿到最终结果，只完成了"发起"但未"闭环"。</p>
+    <p class="body-text" style="margin-bottom:0;">下周计划调整：把表格整理工作压缩到每天固定的一小段时间集中处理，把更多时间投入到电话确认、实地拜访这类能直接产出结果和数据的工作上，优先把本周遗留的报价确认、材料清单补充等事项闭环，再推进下周新增的33家供应商联系工作。</p>
+  </div>
+
+  <footer>SnackLoop 周报 · Mason（采购）· 2026年7月13日–7月17日</footer>
+
+</div>
+</body>
+</html>
