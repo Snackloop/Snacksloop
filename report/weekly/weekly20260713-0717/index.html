@@ -1,0 +1,376 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<title>小林 — 本周工作周报（2026年7月13日–7月17日）</title>
+<style>
+  html{background:#0a0a0a;}
+  body{
+    margin:0;
+    background:#111111;
+    color:#ffffff;
+    font-family:Arial, "PingFang SC", "Microsoft YaHei", sans-serif;
+    line-height:1.8;
+  }
+  .canvas{width:1080px;margin:0 auto;padding:0 0 80px;}
+
+  .logo-bar{
+    padding:26px 60px;display:flex;align-items:center;justify-content:space-between;
+    border-bottom:1px solid #2A2A2A;
+  }
+  .logo{font-size:26px;font-weight:bold;}
+  .logo .snack{color:#ffffff;}
+  .logo .loop{color:#F5C842;}
+  .logo .x{color:#ffffff;font-weight:normal;margin:0 10px;font-size:20px;}
+  .logo .baopop{color:#F0508C;}
+  .logo-tag{font-size:11px;color:#CCCCCC;letter-spacing:.25em;text-transform:uppercase;}
+
+  header.cover{text-align:center;padding:70px 60px 50px;}
+  header.cover .eyebrow{letter-spacing:.4em;font-size:12px;color:#F0508C;text-transform:uppercase;font-weight:bold;}
+  header.cover h1{font-size:36px;margin:18px 0 10px;color:#F5C842;font-weight:bold;}
+  header.cover .date{color:#CCCCCC;font-size:14px;}
+  .gold-rule{height:3px;width:100%;background:#F5C842;margin-top:34px;}
+
+  .person-header{display:flex;align-items:center;gap:16px;padding:40px 60px 0;}
+  .avatar{
+    width:52px;height:52px;border-radius:50%;background:#2A2A2A;color:#F5C842;
+    font-weight:bold;font-size:20px;display:flex;align-items:center;justify-content:center;
+    border:2px solid #F5C842;flex-shrink:0;
+  }
+  .person-meta h2{margin:0;font-size:22px;color:#F5C842;font-weight:bold;}
+  .person-meta .role{font-size:12.5px;color:#999999;margin-top:3px;}
+  .period-tag{
+    display:inline-block;background:#1C1C1C;border:1px solid #2A2A2A;color:#CCCCCC;
+    font-size:12px;padding:5px 12px;border-radius:20px;margin:18px 60px 0;
+  }
+
+  section{padding:44px 60px;}
+  section + section{border-top:1px solid #2A2A2A;}
+
+  .work-card{
+    background:#1C1C1C;
+    border:1px solid #2A2A2A;
+    border-radius:10px;
+    padding:26px 28px;
+    margin-bottom:36px;
+  }
+  .work-card h3{
+    font-size:19px;color:#F5C842;font-weight:bold;margin:0 0 20px;
+    display:flex;align-items:center;gap:10px;
+  }
+  .work-card h3 .item-no{
+    background:#F5C842;color:#111;font-size:12px;font-weight:bold;
+    border-radius:4px;padding:3px 9px;
+  }
+
+  .field{margin:16px 0;}
+  .field .label{
+    font-size:12px;color:#F0508C;font-weight:bold;letter-spacing:.05em;
+    text-transform:uppercase;margin-bottom:6px;
+  }
+  .field .content{font-size:14px;color:#DDDDDD;}
+  .field .content ul{margin:4px 0 0;padding-left:20px;}
+  .field .content li{margin:4px 0;}
+
+  table.cmp{
+    width:100%;border-collapse:collapse;margin:10px 0;font-size:13px;
+  }
+  table.cmp th,table.cmp td{
+    border:1px solid #2A2A2A;padding:10px 12px;text-align:left;
+  }
+  table.cmp th{background:#2A2A2A;color:#F5C842;font-weight:bold;}
+  table.cmp td{color:#CCCCCC;background:#151515;}
+  .todo{color:#F0508C;font-style:normal;font-weight:bold;}
+
+  .issue-box{
+    background:#241414;border-left:4px solid #F0508C;border-radius:0 6px 6px 0;
+    padding:12px 16px;font-size:13.5px;color:#e0b8bf;
+  }
+
+  .delivery-grid{
+    display:table;width:100%;border-spacing:14px 0;margin:0 -14px;
+  }
+  .delivery-row{display:table-row;}
+  .delivery-cell{
+    display:table-cell;width:33.33%;background:#151515;border:1px solid #2A2A2A;
+    border-radius:6px;padding:12px 14px;vertical-align:top;
+  }
+  .delivery-cell .dl{font-size:11px;color:#999;margin-bottom:4px;}
+  .delivery-cell .dv{font-size:13.5px;color:#fff;font-weight:bold;}
+
+  h4.zone-title{
+    font-size:15.5px;color:#F0508C;font-weight:bold;margin:34px 0 12px;
+  }
+
+  .gallery{display:table;width:100%;border-spacing:12px;margin:0 -12px 4px;}
+  .gallery-row{display:table-row;}
+  .gallery-cell{display:table-cell;width:33.33%;}
+  .gallery figure{margin:0;}
+  .gallery img{
+    width:100%;height:200px;object-fit:cover;border-radius:6px;
+    border:1px solid #2A2A2A;display:block;
+  }
+  figcaption{font-size:11px;color:#999;text-align:center;margin-top:5px;}
+
+  .video-block{
+    margin:20px 0 8px;text-align:center;background:#1C1C1C;
+    border:1px solid #2A2A2A;border-radius:8px;padding:22px;
+  }
+  .video-block video{width:480px;border-radius:6px;background:#000;}
+  .video-caption{font-size:12px;color:#999;margin-top:10px;}
+
+  .notice{
+    background:#1C1C1C;border:1px dashed #F5C842;border-radius:8px;
+    padding:16px 20px;font-size:13px;color:#F5C842;margin:0 60px 30px;
+  }
+
+  footer{text-align:center;font-size:12px;color:#666;padding:36px 60px 0;}
+  footer .foot-logo{margin-bottom:8px;}
+  footer .foot-logo .snack{color:#fff;font-weight:bold;}
+  footer .foot-logo .loop{color:#F5C842;font-weight:bold;}
+</style>
+</head>
+<body>
+<div class="canvas">
+
+  <div class="logo-bar">
+    <div class="logo"><span class="snack">Snack</span><span class="loop">Loop</span><span class="x">×</span><span class="baopop">BaoPop</span></div>
+    <div class="logo-tag">Weekly Report · 按新标准执行</div>
+  </div>
+
+  <header class="cover">
+    <div class="eyebrow">本周工作周报</div>
+    <h1>小林 — 本周工作周报</h1>
+    <div class="date">2026年7月13日 — 7月17日</div>
+    <div class="gold-rule"></div>
+  </header>
+
+  <div class="person-header">
+    <div class="avatar">林</div>
+    <div class="person-meta">
+      <h2>小林</h2>
+      <div class="role">采购 / 供应商对接</div>
+    </div>
+  </div>
+  <div class="period-tag">按《团队工作周报标准》独立汇报</div>
+
+  <div class="notice">
+    ⚠ 部分数据（报价金额、交期天数、SKU数量等）为待补充占位，已在下方标注 <span class="todo">〔待补充〕</span>，请补充具体数字后再发送给老板。
+  </div>
+
+  <!-- 事项一：电子标签供应商询价 -->
+  <section>
+    <div class="work-card">
+      <h3><span class="item-no">事项一</span>电子标签供应商询价</h3>
+
+      <div class="field">
+        <div class="label">本周原定目标</div>
+        <div class="content">继续跟进物料工厂报价对比结果，推进供应商核价与采购决策。</div>
+      </div>
+
+      <div class="field">
+        <div class="label">实际完成结果 / 具体数字</div>
+        <div class="content">
+          本周完成 <b>4家</b> 电子标签供应商询价，涵盖 <b>HiPEINK</b>、<b>HiDiSIM</b> 等品牌，4家均已收到正式报价单及产品资料，已整理发送至老板邮箱/群内。
+          <table class="cmp">
+            <thead><tr><th>供应商</th><th>单价（每片）</th><th>起订量</th><th>交期</th><th>备注</th></tr></thead>
+            <tbody>
+              <tr><td>HiPEINK</td><td class="todo">待补充</td><td class="todo">待补充</td><td class="todo">待补充</td><td class="todo">待补充</td></tr>
+              <tr><td>HiDiSIM</td><td class="todo">待补充</td><td class="todo">待补充</td><td class="todo">待补充</td><td class="todo">待补充</td></tr>
+              <tr><td class="todo">供应商3</td><td class="todo">待补充</td><td class="todo">待补充</td><td class="todo">待补充</td><td class="todo">待补充</td></tr>
+              <tr><td class="todo">供应商4</td><td class="todo">待补充</td><td class="todo">待补充</td><td class="todo">待补充</td><td class="todo">待补充</td></tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+
+      <div class="field">
+        <div class="label">关键结论及推荐意见</div>
+        <div class="content todo">待补充：请填写4家报价的价格差异幅度、交期差异，并给出推荐合作的供应商及推荐原因（如性价比最优 / 交期最短 / 售后支持最好等）。</div>
+      </div>
+
+      <div class="field">
+        <div class="label">当前存在的问题</div>
+        <div class="issue-box">部分供应商尚未提供样品，无法现场验证电子标签的显示效果与耐用性；需进一步索取样品并测试后再最终定价。</div>
+      </div>
+
+      <div class="field">
+        <div class="label">下周负责人 / 截止日期 / 交付内容</div>
+        <div class="delivery-grid">
+          <div class="delivery-row">
+            <div class="delivery-cell"><div class="dl">负责人</div><div class="dv">小林</div></div>
+            <div class="delivery-cell"><div class="dl">截止日期</div><div class="dv todo">待补充（建议下周三前）</div></div>
+            <div class="delivery-cell"><div class="dl">交付内容</div><div class="dv">4家供应商完整比价表 + 样品测试报告 + 推荐意见</div></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 事项二：duoduo snack 标杆门店考察 -->
+  <section>
+    <div class="work-card">
+      <h3><span class="item-no">事项二</span>Duoduo Snack 标杆门店考察学习</h3>
+
+      <div class="field">
+        <div class="label">本周原定目标</div>
+        <div class="content">非本周原定计划任务，为主动补充的标杆门店学习考察，旨在为本项目店铺陈列、动线及氛围营造提供参考。</div>
+      </div>
+
+      <div class="field">
+        <div class="label">实际完成结果 / 具体数字</div>
+        <div class="content">
+          实地考察 Duoduo Snack 门店，拍摄全景视频1段、现场照片共 <b>44张</b>，覆盖烘焙区、零食区、潮玩区、冷藏区、仓库区、收银区、日用品区、饰品区共 <b>8个</b> 功能分区，整理出可直接借鉴的陈列 / 运营细节共 <b>10项</b>（见下方图文说明）。
+        </div>
+      </div>
+
+      <div class="video-block">
+        <video controls preload="metadata">
+          <source src="video/duoduo_overview.mov" type="video/quicktime">
+          <source src="video/duoduo_overview.mov" type="video/mp4">
+          您的浏览器不支持内嵌视频播放，请直接打开 video/duoduo_overview.mov 查看。
+        </video>
+        <div class="video-caption">Duoduo Snack 门店全景视频</div>
+      </div>
+
+      <h4 class="zone-title">① 入口引流与动线</h4>
+      <div class="gallery">
+        <div class="gallery-row">
+          <div class="gallery-cell"><figure><img src="images/IMG_8731.jpg"><figcaption>门口大屏滚动播放活动信息，可学习用于引流及促销宣传</figcaption></figure></div>
+          <div class="gallery-cell"><figure><img src="images/IMG_8732.jpg"><figcaption>大小推车配置齐全，方便不同购物量顾客使用</figcaption></figure></div>
+          <div class="gallery-cell"><figure><img src="images/IMG_8728.jpg"><figcaption>入口区域陈列，可参考动线引导方式</figcaption></figure></div>
+        </div>
+      </div>
+
+      <h4 class="zone-title">② 货架与陈列方式</h4>
+      <div class="gallery">
+        <div class="gallery-row">
+          <div class="gallery-cell"><figure><img src="images/img1111.jpg"><figcaption>定制纸盒货架，成本低且可按品类灵活定制样式</figcaption></figure></div>
+          <div class="gallery-cell"><figure><img src="images/IMG_8735.jpg"><figcaption>铁质货架，适合承重较大的整箱商品</figcaption></figure></div>
+          <div class="gallery-cell"><figure><img src="images/IMG_8734.jpg"><figcaption>整箱直接落地售卖（不上货架），节省陈列成本，适合走量爆款</figcaption></figure></div>
+        </div>
+        <div class="gallery-row">
+          <div class="gallery-cell"><figure><img src="images/IMG_8729.jpg"><figcaption>零食区货架层高与商品摆放密度参考</figcaption></figure></div>
+          <div class="gallery-cell"><figure><img src="images/IMG_8730.jpg"><figcaption>零食区分类标识与货架分区方式</figcaption></figure></div>
+          <div class="gallery-cell"><figure><img src="images/IMG_8736.jpg"><figcaption>货架整体陈列密度及色彩搭配</figcaption></figure></div>
+        </div>
+      </div>
+
+      <h4 class="zone-title">③ 潮玩区氛围营造</h4>
+      <div class="gallery">
+        <div class="gallery-row">
+          <div class="gallery-cell"><figure><img src="images/IMG_8738.jpg"><figcaption>潮玩区整体采用黄色主色调，视觉冲击力强，可参考应用于我们的潮玩区</figcaption></figure></div>
+          <div class="gallery-cell"><figure><img src="images/IMG_8739.jpg"><figcaption>灯条氛围布置细节，增强区域辨识度</figcaption></figure></div>
+          <div class="gallery-cell"><figure><img src="images/IMG_8740.jpg"><figcaption>潮玩商品陈列排布方式</figcaption></figure></div>
+        </div>
+        <div class="gallery-row">
+          <div class="gallery-cell"><figure><img src="images/IMG_8741.jpg"><figcaption>潮玩区照明与背景色搭配细节</figcaption></figure></div>
+          <div class="gallery-cell"><figure><img src="images/IMG_8737.jpg"><figcaption>潮玩区货架结构参考</figcaption></figure></div>
+          <div class="gallery-cell"><figure><img src="images/IMG_8742.jpg"><figcaption>潮玩区整体区域划分方式</figcaption></figure></div>
+        </div>
+      </div>
+
+      <h4 class="zone-title">④ 电子标签与价签系统</h4>
+      <div class="gallery">
+        <div class="gallery-row">
+          <div class="gallery-cell"><figure><img src="images/IMG_8744.jpg"><figcaption>货架采用电子标签，可远程统一改价、减少人工换签成本，与本周电子标签询价工作对应</figcaption></figure></div>
+          <div class="gallery-cell"><figure><img src="images/IMG_8770.jpg"><figcaption>透明卡槽标签架，用于插放纸质价签，我们店铺货架也需要采购此类卡槽配件</figcaption></figure></div>
+          <div class="gallery-cell"><figure><img src="images/IMG_8753.jpg"><figcaption>多款商品标签上标注同一进口商地址，说明有集中进口渠道可对接，值得后续跟进该进口商信息</figcaption></figure></div>
+        </div>
+      </div>
+
+      <h4 class="zone-title">⑤ 冷藏区 / 仓库区 / 收银区</h4>
+      <div class="gallery">
+        <div class="gallery-row">
+          <div class="gallery-cell"><figure><img src="images/IMG_8743.jpg"><figcaption>冷藏区陈列与温控设备布置</figcaption></figure></div>
+          <div class="gallery-cell"><figure><img src="images/IMG_8745.jpg"><figcaption>冷藏区商品分类摆放</figcaption></figure></div>
+          <div class="gallery-cell"><figure><img src="images/IMG_8746.jpg"><figcaption>仓库区货物堆放与周转方式</figcaption></figure></div>
+        </div>
+        <div class="gallery-row">
+          <div class="gallery-cell"><figure><img src="images/IMG_8747.jpg"><figcaption>仓库区补货动线安排</figcaption></figure></div>
+          <div class="gallery-cell"><figure><img src="images/IMG_8748.jpg"><figcaption>收银区排队动线与收银台布置</figcaption></figure></div>
+          <div class="gallery-cell"><figure><img src="images/IMG_8749.jpg"><figcaption>收银区旁的临时促销陈列位</figcaption></figure></div>
+        </div>
+      </div>
+
+      <h4 class="zone-title">⑥ 日用品区 / 饰品区 / 烘焙区</h4>
+      <div class="gallery">
+        <div class="gallery-row">
+          <div class="gallery-cell"><figure><img src="images/IMG_8750.jpg"><figcaption>日用品区分类陈列</figcaption></figure></div>
+          <div class="gallery-cell"><figure><img src="images/IMG_8751.jpg"><figcaption>日用品区货架标识系统</figcaption></figure></div>
+          <div class="gallery-cell"><figure><img src="images/IMG_8752.jpg"><figcaption>饰品区展示柜与灯光设计</figcaption></figure></div>
+        </div>
+        <div class="gallery-row">
+          <div class="gallery-cell"><figure><img src="images/IMG_8754.jpg"><figcaption>饰品区小件商品陈列方式</figcaption></figure></div>
+          <div class="gallery-cell"><figure><img src="images/IMG_8755.jpg"><figcaption>烘焙区现场制作与展示陈列</figcaption></figure></div>
+          <div class="gallery-cell"><figure><img src="images/IMG_8756.jpg"><figcaption>烘焙区包装与价格标示方式</figcaption></figure></div>
+        </div>
+      </div>
+
+      <h4 class="zone-title">⑦ 其他陈列与运营细节参考</h4>
+      <div class="gallery">
+        <div class="gallery-row">
+          <div class="gallery-cell"><figure><img src="images/IMG_8757.jpg"><figcaption>促销物料及价格牌设计</figcaption></figure></div>
+          <div class="gallery-cell"><figure><img src="images/IMG_8758.jpg"><figcaption>商品分类导视牌样式</figcaption></figure></div>
+          <div class="gallery-cell"><figure><img src="images/IMG_8759.jpg"><figcaption>店内指示牌与分区标识</figcaption></figure></div>
+        </div>
+        <div class="gallery-row">
+          <div class="gallery-cell"><figure><img src="images/IMG_8760.jpg"><figcaption>整体灯光氛围设计参考</figcaption></figure></div>
+          <div class="gallery-cell"><figure><img src="images/IMG_8761.jpg"><figcaption>货架间距与通道宽度参考</figcaption></figure></div>
+          <div class="gallery-cell"><figure><img src="images/IMG_8762.jpg"><figcaption>爆款商品端架陈列方式</figcaption></figure></div>
+        </div>
+        <div class="gallery-row">
+          <div class="gallery-cell"><figure><img src="images/IMG_8763.jpg"><figcaption>促销堆头陈列细节</figcaption></figure></div>
+          <div class="gallery-cell"><figure><img src="images/IMG_8764.jpg"><figcaption>商品价格标签样式细节</figcaption></figure></div>
+          <div class="gallery-cell"><figure><img src="images/IMG_8765.jpg"><figcaption>店内墙面装饰及氛围营造</figcaption></figure></div>
+        </div>
+        <div class="gallery-row">
+          <div class="gallery-cell"><figure><img src="images/IMG_8766.jpg"><figcaption>货架顶部广告位设计</figcaption></figure></div>
+          <div class="gallery-cell"><figure><img src="images/IMG_8767.jpg"><figcaption>试吃/体验区设置参考</figcaption></figure></div>
+          <div class="gallery-cell"><figure><img src="images/IMG_8768.jpg"><figcaption>结账区顺手买商品陈列</figcaption></figure></div>
+        </div>
+        <div class="gallery-row">
+          <div class="gallery-cell"><figure><img src="images/IMG_8769.jpg"><figcaption>门店整体色彩与品牌视觉统一性</figcaption></figure></div>
+          <div class="gallery-cell"><figure><img src="images/IMG_8771.jpg"><figcaption>出口/收银动线收尾细节</figcaption></figure></div>
+          <div class="gallery-cell"></div>
+        </div>
+      </div>
+
+      <div class="field" style="margin-top:30px;">
+        <div class="label">关键结论及推荐意见</div>
+        <div class="content">
+          <ul>
+            <li>电子标签系统可有效降低改价人工成本，建议结合本周询价结果尽快在部分货架试点使用；</li>
+            <li>整箱落地陈列（不上架）适合我们主推的爆款零食，可降低货架采购成本；</li>
+            <li>潮玩区可参考黄色主色调 + 灯条氛围的做法，提升该区域视觉吸引力；</li>
+            <li>多款商品标签指向同一进口商，建议后续跟进该进口商，评估是否可作为集中供货渠道；</li>
+            <li>货架配套的透明卡槽标签架为必需采购品，建议本月内下单采购。</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="field">
+        <div class="label">当前存在的问题</div>
+        <div class="issue-box">部分区域照片未采集对应的坪效、SKU数量等经营数据，仅为陈列层面的视觉参考；如需完整对标数据，需与该门店二次沟通或另行调研。</div>
+      </div>
+
+      <div class="field">
+        <div class="label">下周负责人 / 截止日期 / 交付内容</div>
+        <div class="delivery-grid">
+          <div class="delivery-row">
+            <div class="delivery-cell"><div class="dl">负责人</div><div class="dv">小林</div></div>
+            <div class="delivery-cell"><div class="dl">截止日期</div><div class="dv todo">待补充（建议下周二前）</div></div>
+            <div class="delivery-cell"><div class="dl">交付内容</div><div class="dv">跟进同一进口商信息 + 透明卡槽标签架采购下单</div></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <div class="foot-logo"><span class="snack">Snack</span><span class="loop">Loop</span></div>
+    小林 · 本周工作周报 · 2026年7月13日–7月17日 · 内部资料，请勿外传
+  </footer>
+</div>
+</body>
+</html>
