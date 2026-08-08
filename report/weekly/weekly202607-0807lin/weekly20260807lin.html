@@ -1,0 +1,312 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<title>小林 — 双周工作周报（2026年7月27日–8月7日）</title>
+<style>
+  html{background:#0a0a0a;}
+  body{margin:0;background:#111111;color:#ffffff;font-family:Arial,"PingFang SC","Microsoft YaHei",sans-serif;line-height:1.8;}
+  .canvas{width:1080px;margin:0 auto;padding:0 0 80px;}
+
+  .logo-bar{padding:26px 60px;display:flex;align-items:center;justify-content:space-between;border-bottom:1px solid #2A2A2A;}
+  .logo{font-size:26px;font-weight:bold;}
+  .logo .snack{color:#fff;}
+  .logo .loop{color:#F5C842;}
+  .logo .x{color:#fff;font-weight:normal;margin:0 10px;font-size:20px;}
+  .logo .baopop{color:#F0508C;}
+  .logo-tag{font-size:11px;color:#CCCCCC;letter-spacing:.25em;text-transform:uppercase;}
+
+  header.cover{text-align:center;padding:70px 60px 50px;}
+  header.cover .eyebrow{letter-spacing:.4em;font-size:12px;color:#F0508C;text-transform:uppercase;font-weight:bold;}
+  header.cover h1{font-size:34px;margin:18px 0 10px;color:#F5C842;font-weight:bold;}
+  header.cover .date{color:#CCCCCC;font-size:14px;}
+  .gold-rule{height:3px;width:100%;background:#F5C842;margin-top:34px;}
+
+  .person-header{display:flex;align-items:center;gap:16px;padding:40px 60px 0;}
+  .avatar{width:52px;height:52px;border-radius:50%;background:#2A2A2A;color:#F5C842;font-weight:bold;font-size:20px;display:flex;align-items:center;justify-content:center;border:2px solid #F5C842;flex-shrink:0;}
+  .person-meta h2{margin:0;font-size:22px;color:#F5C842;font-weight:bold;}
+  .person-meta .role{font-size:12.5px;color:#999;margin-top:3px;}
+  .period-tag{display:inline-block;background:#1C1C1C;border:1px solid #2A2A2A;color:#CCCCCC;font-size:12px;padding:5px 12px;border-radius:20px;margin:18px 60px 0;}
+
+  section{padding:44px 60px;}
+  section + section{border-top:1px solid #2A2A2A;}
+
+  .work-card{background:#1C1C1C;border:1px solid #2A2A2A;border-radius:10px;padding:26px 28px;margin-bottom:36px;}
+  .work-card h3{font-size:19px;color:#F5C842;font-weight:bold;margin:0 0 20px;display:flex;align-items:center;gap:10px;}
+  .work-card h3 .item-no{background:#F5C842;color:#111;font-size:12px;font-weight:bold;border-radius:4px;padding:3px 9px;}
+
+  .field{margin:16px 0;}
+  .field .label{font-size:12px;color:#F0508C;font-weight:bold;letter-spacing:.05em;text-transform:uppercase;margin-bottom:6px;}
+  .field .content{font-size:14px;color:#DDDDDD;}
+  .field .content ul{margin:4px 0 0;padding-left:20px;}
+  .field .content li{margin:4px 0;}
+
+  .todo{color:#F0508C;font-weight:bold;}
+  .issue-box{background:#241414;border-left:4px solid #F0508C;border-radius:0 6px 6px 0;padding:12px 16px;font-size:13.5px;color:#e0b8bf;}
+
+  .delivery-grid{display:table;width:100%;border-spacing:14px 0;margin:0 -14px;}
+  .delivery-row{display:table-row;}
+  .delivery-cell{display:table-cell;width:33.33%;background:#151515;border:1px solid #2A2A2A;border-radius:6px;padding:12px 14px;vertical-align:top;}
+  .delivery-cell .dl{font-size:11px;color:#999;margin-bottom:4px;}
+  .delivery-cell .dv{font-size:13.5px;color:#fff;font-weight:bold;}
+
+  /* material cards */
+  .material-grid{display:table;width:100%;border-spacing:14px;margin:0 -14px 4px;}
+  .material-row{display:table-row;}
+  .material-cell{display:table-cell;width:33.33%;vertical-align:top;}
+  .material-card{background:#151515;border:1px solid #2A2A2A;border-radius:8px;padding:16px 18px;height:100%;}
+  .material-card .m-name{font-size:14.5px;font-weight:bold;color:#F5C842;margin-bottom:8px;}
+  .material-card .m-row{font-size:12px;color:#CCCCCC;margin:5px 0;}
+  .material-card .m-row b{color:#F0508C;font-weight:bold;}
+
+  table.stores{width:100%;border-collapse:collapse;margin:16px 0;font-size:13px;}
+  table.stores th,table.stores td{border:1px solid #2A2A2A;padding:10px 12px;text-align:left;vertical-align:top;}
+  table.stores th{background:#2A2A2A;color:#F5C842;font-weight:bold;white-space:nowrap;}
+  table.stores td{color:#CCCCCC;background:#151515;}
+  .tag{display:inline-block;padding:2px 9px;border-radius:10px;font-size:11px;font-weight:bold;white-space:nowrap;}
+  .tag-green{background:#10391f;color:#4ade80;}
+  .tag-amber{background:#3a2a0d;color:#f5b342;}
+  .tag-gray{background:#2A2A2A;color:#999;}
+
+  .notice{background:#1C1C1C;border:1px dashed #F5C842;border-radius:8px;padding:16px 20px;font-size:13px;color:#F5C842;margin:0 60px 30px;}
+
+  footer{text-align:center;font-size:12px;color:#666;padding:36px 60px 0;}
+  footer .foot-logo{margin-bottom:8px;}
+  footer .foot-logo .snack{color:#fff;font-weight:bold;}
+  footer .foot-logo .loop{color:#F5C842;font-weight:bold;}
+</style>
+</head>
+<body>
+<div class="canvas">
+
+  <div class="logo-bar">
+    <div class="logo"><span class="snack">Snack</span><span class="loop">Loop</span><span class="x">×</span><span class="baopop">BaoPop</span></div>
+    <div class="logo-tag">Weekly Report · 按新标准执行</div>
+  </div>
+
+  <header class="cover">
+    <div class="eyebrow">双周工作周报（合并）</div>
+    <h1>小林 — 双周工作周报</h1>
+    <div class="date">第一周：2026年7月27日–7月31日　|　第二周：2026年8月3日–8月7日</div>
+    <div class="gold-rule"></div>
+  </header>
+
+  <div class="person-header">
+    <div class="avatar">林</div>
+    <div class="person-meta">
+      <h2>小林</h2>
+      <div class="role">采购 / 供应商对接 / 开业筹备</div>
+    </div>
+  </div>
+  <div class="period-tag">按《团队工作周报标准》独立汇报（本人负责部分）</div>
+
+  <div class="notice">
+    ⚠ 因两周工作主线连贯（开业物料方案 + ESL供应商询价均跨两周持续推进），本次合并汇报。物料成本列为待核价占位，已在附件表格中标注 <span class="todo">〔待补充〕</span>。
+  </div>
+
+  <!-- 事项一：开业物料方案整理与系统化 -->
+  <section>
+    <div class="work-card">
+      <h3><span class="item-no">事项一</span>开业物料方案整理与系统化</h3>
+
+      <div class="field">
+        <div class="label">本周原定目标</div>
+        <div class="content">围绕门店开业筹备，整理可落地的开业物料方案，形成可供决策的清单与展示材料。</div>
+      </div>
+
+      <div class="field">
+        <div class="label">实际完成结果 / 具体数字</div>
+        <div class="content">
+          整理并系统化 <b>7个</b> 开业物料方案，覆盖低成本引流、社交传播、品牌日常曝光三类场景，逐项配齐特点/学习来源/使用原因，产出两份文档：① Excel清单（见附件）；② SnackLoop品牌风格图文展示页（金色+霓虹粉主题）。
+        </div>
+        <div class="material-grid">
+          <div class="material-row">
+            <div class="material-cell"><div class="material-card">
+              <div class="m-name">① 气球装饰</div>
+              <div class="m-row"><b>特点：</b>低成本，可快速大面积布置</div>
+              <div class="m-row"><b>使用原因：</b>打卡送小孩增加人气</div>
+            </div></div>
+            <div class="material-cell"><div class="material-card">
+              <div class="m-name">② 网红开业礼</div>
+              <div class="m-row"><b>特点：</b>定制创意日历 + 手提袋</div>
+              <div class="m-row"><b>使用原因：</b>品牌曝光 + 社媒传播</div>
+            </div></div>
+            <div class="material-cell"><div class="material-card">
+              <div class="m-name">③ 打卡立牌</div>
+              <div class="m-row"><b>特点：</b>超大道具，KT板材质低成本高复用</div>
+              <div class="m-row"><b>使用原因：</b>视觉反差吸引眼球</div>
+            </div></div>
+          </div>
+          <div class="material-row">
+            <div class="material-cell"><div class="material-card">
+              <div class="m-name">④ 明信片 &amp; 香片</div>
+              <div class="m-row"><b>特点：</b>小件纪念品</div>
+              <div class="m-row"><b>使用原因：</b>情感传递，增强客户粘性</div>
+            </div></div>
+            <div class="material-cell"><div class="material-card">
+              <div class="m-name">⑤ 街边宣传牌</div>
+              <div class="m-row"><b>特点：</b>气球装饰延伸</div>
+              <div class="m-row"><b>使用原因：</b>扩大覆盖面，引流路人</div>
+            </div></div>
+            <div class="material-cell"><div class="material-card">
+              <div class="m-name">⑥ 编织手机挂绳</div>
+              <div class="m-row"><b>特点：</b>定制品牌色</div>
+              <div class="m-row"><b>使用原因：</b>日常高频曝光触点</div>
+            </div></div>
+          </div>
+          <div class="material-row">
+            <div class="material-cell"><div class="material-card">
+              <div class="m-name">⑦ 折叠扇子</div>
+              <div class="m-row"><b>特点：</b>实用礼品</div>
+              <div class="m-row"><b>使用原因：</b>使用者主动推广</div>
+            </div></div>
+            <div class="material-cell"></div>
+            <div class="material-cell"></div>
+          </div>
+        </div>
+      </div>
+
+      <div class="field">
+        <div class="label">关键结论及推荐意见</div>
+        <div class="content">
+          <ul>
+            <li>低成本物料占多数（气球、立牌、挂绳、扇子），建议优先落地，见效快；</li>
+            <li>社交传播价值高的两项（打卡立牌、网红开业礼）建议列为重点预算项，自带自然传播属性；</li>
+            <li>品牌触点已覆盖大型装置（气球/立牌/宣传牌）+ 随身配饰（挂绳/扇子）+ 纪念品（明信片/香片）三个维度，结构完整，无需再新增品类。</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="field">
+        <div class="label">当前存在的问题</div>
+        <div class="issue-box">7项方案的具体制作成本均未核价，附件清单中标注为待补充；在成本补齐前无法测算开业物料总预算，需要尽快向对应制作方/供应商询价。</div>
+      </div>
+
+      <div class="field">
+        <div class="label">下周负责人 / 截止日期 / 交付内容</div>
+        <div class="delivery-grid">
+          <div class="delivery-row">
+            <div class="delivery-cell"><div class="dl">负责人</div><div class="dv">小林</div></div>
+            <div class="delivery-cell"><div class="dl">截止日期</div><div class="dv todo">待补充</div></div>
+            <div class="delivery-cell"><div class="dl">交付内容</div><div class="dv">7项物料逐一询价，补齐成本列；输出最终可编辑版本</div></div>
+          </div>
+        </div>
+      </div>
+
+      <div class="field">
+        <div class="label">附件</div>
+        <div class="content">📎 <a href="files/开业物料方案清单.xlsx" style="color:#F5C842;">开业物料方案清单.xlsx</a>（7项方案完整清单，含特点/学习点/使用原因/成本占位/状态）</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 事项二：电子标签（ESL）供应商跟进 -->
+  <section>
+    <div class="work-card">
+      <h3><span class="item-no">事项二</span>电子标签（ESL）供应商跟进</h3>
+
+      <div class="field">
+        <div class="label">本周原定目标</div>
+        <div class="content">延续电子标签供应商询价，扩大供应商触达范围，推进报价与方案对比。</div>
+      </div>
+
+      <div class="field">
+        <div class="label">实际完成结果 / 具体数字</div>
+        <div class="content">
+          为洛杉矶两家旗舰店（5,000 sq ft + 1,000 sq ft，约2,000–3,000 SKU）寻找ESL方案，8月5日启动联系，共触达 <b>12家</b>供应商，跟进状态如下：
+        </div>
+        <table class="stores">
+          <thead><tr><th>分类</th><th>数量</th><th>说明</th></tr></thead>
+          <tbody>
+            <tr><td><span class="tag tag-green">进展中</span></td><td>4家</td><td>Zkong、SoluM、Pricer、Impinj（RFID为主）— 已获回复，正在推进报价/方案</td></tr>
+            <tr><td><span class="tag tag-amber">已催单</span></td><td>6家</td><td>Sagenet、Bluestar、Zebra、Hanshow、Avery Dennison、Zhsunyco — 8/5首次联系，无回复已发催单</td></tr>
+            <tr><td><span class="tag tag-gray">暂时搁置</span></td><td>2家</td><td>Vusion（邮箱加密未找到替代联系方式）、Highlight86（域名疑似有误，邮箱退信）</td></tr>
+          </tbody>
+        </table>
+        <div class="content" style="margin-top:14px;">
+          重点跟进两家：<b>Zkong</b>（推荐 Valley/Blade 系列，2.1"/2.9"最热销，已要求提供两种尺寸正式报价用于定尺寸）；<b>SoluM</b>（已提供预约会议链接，待预约通话谈方案）。
+        </div>
+      </div>
+
+      <div class="field">
+        <div class="label">关键结论及推荐意见</div>
+        <div class="content">
+          <ul>
+            <li>Zkong 已进入具体尺寸报价阶段，进度最快，建议优先跟进拿到正式报价单；</li>
+            <li>SoluM 提供了预约通话机制，建议本周内完成预约，直接确认方案细节；</li>
+            <li>Impinj 以 RFID 为主业务，其推荐的代理商 Atlas RFID 及其是否有 ESL 合作伙伴需要进一步确认，避免方向跑偏；</li>
+            <li>6家已催单供应商中如一周内仍无回复，建议改用电话跟进，避免影响整体询价进度。</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="field">
+        <div class="label">当前存在的问题</div>
+        <div class="issue-box">Vusion 和 Highlight86 两家联系方式失效，暂无法建立联系；Vusion 作为行业头部品牌，建议后续尝试通过展会/其他官方渠道获取有效联系方式，而非放弃跟进。</div>
+      </div>
+
+      <div class="field">
+        <div class="label">下周负责人 / 截止日期 / 交付内容</div>
+        <div class="delivery-grid">
+          <div class="delivery-row">
+            <div class="delivery-cell"><div class="dl">负责人</div><div class="dv">小林</div></div>
+            <div class="delivery-cell"><div class="dl">截止日期</div><div class="dv todo">待补充</div></div>
+            <div class="delivery-cell"><div class="dv" style="font-size:12.5px;">拿到 Zkong 正式报价单 + 完成 SoluM 通话预约 + 6家催单供应商电话跟进</div></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 事项三：其他跟进事项 -->
+  <section>
+    <div class="work-card">
+      <h3><span class="item-no">事项三</span>其他跟进事项</h3>
+
+      <div class="field">
+        <div class="label">本周原定目标</div>
+        <div class="content">推进开业筹备相关的配套跟进（POS系统、物流、市政手续、场地树种检测）。</div>
+      </div>
+
+      <div class="field">
+        <div class="label">实际完成结果 / 具体数字</div>
+        <div class="content">
+          <ul>
+            <li>已询问 <b>POS机团队</b>，具体方案与结论待补充；</li>
+            <li>已询问 <b>物流公司团队</b>，具体方案与结论待补充；</li>
+            <li>前往圣盖博 City（市政部门）咨询了<b>两件事情</b>，具体咨询内容与回复待补充；</li>
+            <li>已约定 <b>下周一</b>与 relocation 团队现场检测门店场地的树木品种。</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="field">
+        <div class="label">关键结论及推荐意见</div>
+        <div class="content todo">待补充：POS机团队和物流公司团队的具体沟通结论、圣盖博City咨询的两件事分别是什么、对方给出的回复或后续要求，建议后续周报里补齐这些细节，方便老板判断是否需要协调资源介入。</div>
+      </div>
+
+      <div class="field">
+        <div class="label">当前存在的问题</div>
+        <div class="issue-box">本项事务较多、进展较分散，目前均处于"已发起沟通、结论待明确"阶段，建议下周逐项跟进并给出明确结论，避免多头进行中的事项互相拖延。</div>
+      </div>
+
+      <div class="field">
+        <div class="label">下周负责人 / 截止日期 / 交付内容</div>
+        <div class="delivery-grid">
+          <div class="delivery-row">
+            <div class="delivery-cell"><div class="dl">负责人</div><div class="dv">小林</div></div>
+            <div class="delivery-cell"><div class="dl">截止日期</div><div class="dv todo">待补充</div></div>
+            <div class="delivery-cell"><div class="dv" style="font-size:12.5px;">周一完成树种检测；补齐POS/物流/市政三项的具体结论</div></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <div class="foot-logo"><span class="snack">Snack</span><span class="loop">Loop</span></div>
+    小林 · 双周工作周报 · 2026年7月27日–8月7日 · 内部资料，请勿外传
+  </footer>
+</div>
+</body>
+</html>
