@@ -1,0 +1,473 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<title>小林 — 本周工作周报（2026年8月17日–8月21日）</title>
+<style>
+  html{background:#0a0a0a;}
+  body{margin:0;background:#111111;color:#ffffff;font-family:Arial,"PingFang SC","Microsoft YaHei",sans-serif;line-height:1.8;}
+  .canvas{width:1080px;margin:0 auto;padding:0 0 80px;}
+
+  .logo-bar{padding:26px 60px;display:flex;align-items:center;justify-content:space-between;border-bottom:1px solid #2A2A2A;}
+  .logo{font-size:26px;font-weight:bold;}
+  .logo .snack{color:#fff;} .logo .loop{color:#F5C842;}
+  .logo .x{color:#fff;font-weight:normal;margin:0 10px;font-size:20px;} .logo .baopop{color:#F0508C;}
+  .logo-tag{font-size:11px;color:#CCCCCC;letter-spacing:.25em;text-transform:uppercase;}
+
+  header.cover{text-align:center;padding:70px 60px 50px;}
+  header.cover .eyebrow{letter-spacing:.4em;font-size:12px;color:#F0508C;text-transform:uppercase;font-weight:bold;}
+  header.cover h1{font-size:36px;margin:18px 0 10px;color:#F5C842;font-weight:bold;}
+  header.cover .date{color:#CCCCCC;font-size:14px;}
+  .gold-rule{height:3px;width:100%;background:#F5C842;margin-top:34px;}
+
+  .person-header{display:flex;align-items:center;gap:16px;padding:40px 60px 0;}
+  .avatar{width:52px;height:52px;border-radius:50%;background:#2A2A2A;color:#F5C842;font-weight:bold;font-size:20px;display:flex;align-items:center;justify-content:center;border:2px solid #F5C842;flex-shrink:0;}
+  .person-meta h2{margin:0;font-size:22px;color:#F5C842;font-weight:bold;}
+  .person-meta .role{font-size:12.5px;color:#999;margin-top:3px;}
+  .period-tag{display:inline-block;background:#1C1C1C;border:1px solid #2A2A2A;color:#CCCCCC;font-size:12px;padding:5px 12px;border-radius:20px;margin:18px 60px 0;}
+
+  section{padding:44px 60px;}
+  section + section{border-top:1px solid #2A2A2A;}
+
+  .hero-section{background:linear-gradient(180deg,#1a1508 0%,#111111 100%);}
+  .hero-title{font-size:24px;color:#F5C842;font-weight:bold;margin:0 0 6px;display:flex;align-items:center;gap:12px;}
+  .hero-sub{font-size:12.5px;color:#999;margin-bottom:26px;}
+
+  .contrib-card{background:#1C1C1C;border:1px solid #F5C842;border-radius:10px;margin-bottom:26px;overflow:hidden;}
+  .contrib-head{background:#F5C842;color:#111;padding:12px 24px;font-size:16px;font-weight:bold;}
+  .contrib-body{padding:20px 24px;}
+  .chain{display:table;width:100%;}
+  .chain-row{display:table-row;}
+  .chain-label{display:table-cell;width:130px;padding:9px 14px 9px 0;vertical-align:top;font-size:12px;font-weight:bold;color:#F0508C;white-space:nowrap;border-bottom:1px solid #262626;}
+  .chain-val{display:table-cell;padding:9px 0;vertical-align:top;font-size:13.5px;color:#DDDDDD;border-bottom:1px solid #262626;}
+  .chain-row:last-child .chain-label,.chain-row:last-child .chain-val{border-bottom:none;}
+  .chain-val ul{margin:2px 0 0;padding-left:18px;} .chain-val li{margin:3px 0;}
+  .val-highlight{color:#F5C842;font-weight:bold;}
+
+  .work-card{background:#1C1C1C;border:1px solid #2A2A2A;border-radius:10px;padding:26px 28px;margin-bottom:36px;}
+  .work-card h3{font-size:19px;color:#F5C842;font-weight:bold;margin:0 0 20px;display:flex;align-items:center;gap:10px;}
+  .work-card h3 .item-no{background:#F5C842;color:#111;font-size:12px;font-weight:bold;border-radius:4px;padding:3px 9px;}
+
+  .field{margin:18px 0;}
+  .field .label{font-size:12px;color:#F0508C;font-weight:bold;letter-spacing:.05em;margin-bottom:6px;}
+  .field .content{font-size:14px;color:#DDDDDD;}
+  .field .content ul{margin:4px 0 0;padding-left:20px;} .field .content li{margin:5px 0;}
+
+  .todo{color:#F0508C;font-weight:bold;}
+  .issue-box{background:#241414;border-left:4px solid #F0508C;border-radius:0 6px 6px 0;padding:12px 16px;font-size:13.5px;color:#e0b8bf;}
+  .idea-box{background:#0f1f16;border-left:4px solid #4ade80;border-radius:0 6px 6px 0;padding:12px 16px;font-size:13.5px;color:#b8e0c8;}
+  .idea-box b{color:#4ade80;}
+
+  .delivery-grid{display:table;width:100%;border-spacing:14px 0;margin:0 -14px;}
+  .delivery-row{display:table-row;}
+  .delivery-cell{display:table-cell;width:33.33%;background:#151515;border:1px solid #2A2A2A;border-radius:6px;padding:12px 14px;vertical-align:top;}
+  .delivery-cell .dl{font-size:11px;color:#999;margin-bottom:4px;}
+  .delivery-cell .dv{font-size:13px;color:#fff;font-weight:bold;}
+
+  table.data{width:100%;border-collapse:collapse;margin:14px 0;font-size:12.5px;}
+  table.data th,table.data td{border:1px solid #2A2A2A;padding:9px 10px;text-align:left;}
+  table.data th{background:#2A2A2A;color:#F5C842;font-weight:bold;white-space:nowrap;}
+  table.data td{color:#CCCCCC;background:#151515;}
+  table.data tr.hi td{background:#241f10;color:#F5C842;font-weight:bold;}
+  table.data tr.lo td{background:#241414;color:#e0b8bf;}
+  .num{text-align:center;}
+
+  .bar-wrap{background:#0d0d0d;border:1px solid #2A2A2A;border-radius:8px;padding:18px 22px;margin:16px 0;}
+  .bar-row{display:table;width:100%;margin:7px 0;font-size:12px;}
+  .bar-name{display:table-cell;width:190px;color:#CCCCCC;vertical-align:middle;}
+  .bar-track{display:table-cell;vertical-align:middle;}
+  .bar-a{height:11px;background:#F5C842;border-radius:2px;display:inline-block;vertical-align:middle;}
+  .bar-b{height:11px;background:#F0508C;border-radius:2px;display:inline-block;vertical-align:middle;}
+  .bar-val{display:table-cell;width:150px;text-align:right;color:#999;font-size:11px;vertical-align:middle;}
+  .legend{font-size:11.5px;color:#999;margin-top:12px;}
+  .legend .sw{display:inline-block;width:11px;height:11px;border-radius:2px;vertical-align:middle;margin-right:5px;}
+
+  .pt{background:#151515;border:1px solid #2A2A2A;border-radius:8px;padding:16px 20px;margin-bottom:13px;}
+  .pt .pt-t{font-size:14.5px;font-weight:bold;color:#F5C842;margin-bottom:7px;}
+  .pt .pt-e{font-size:12.5px;color:#8fa8b8;margin-bottom:7px;border-left:2px solid #3a5568;padding-left:10px;}
+  .pt .pt-a{font-size:13px;color:#DDDDDD;} .pt .pt-a b{color:#F0508C;}
+  .pt.bad{border-color:#5a2a2a;} .pt.bad .pt-t{color:#ff7a8a;}
+  .pt.new{border-color:#2a5a3a;} .pt.new .pt-t{color:#4ade80;}
+
+  .notice{background:#1C1C1C;border:1px dashed #F5C842;border-radius:8px;padding:16px 20px;font-size:13px;color:#F5C842;margin:0 60px 30px;}
+
+  footer{text-align:center;font-size:12px;color:#666;padding:36px 60px 0;}
+  footer .foot-logo{margin-bottom:8px;}
+  footer .foot-logo .snack{color:#fff;font-weight:bold;} footer .foot-logo .loop{color:#F5C842;font-weight:bold;}
+</style>
+</head>
+<body>
+<div class="canvas">
+
+  <div class="logo-bar">
+    <div class="logo"><span class="snack">Snack</span><span class="loop">Loop</span><span class="x">×</span><span class="baopop">BaoPop</span></div>
+    <div class="logo-tag">Weekly Report</div>
+  </div>
+
+  <header class="cover">
+    <div class="eyebrow">本周工作周报</div>
+    <h1>小林 — 本周工作周报</h1>
+    <div class="date">2026年8月17日 — 8月21日</div>
+    <div class="gold-rule"></div>
+  </header>
+
+  <div class="person-header">
+    <div class="avatar">林</div>
+    <div class="person-meta">
+      <h2>小林</h2>
+      <div class="role">采购 / 陈列与视觉 / 选址开发</div>
+    </div>
+  </div>
+  <div class="period-tag">按《团队工作周报标准》独立汇报 · 本周聚焦"做成了什么"</div>
+
+  <div class="notice">
+    ⚠ 数据口径说明：本周报所有评分与顾客行为结论，均来自团队共同填写的《门店考察表》原始数据（<b>11家门店 × 3位评分人 = 33份评分，55条顾客行为记录</b>），本人做了交叉计算，未做任何估算填充。涉及租金、面积等尚未拿到的信息，一律标注 <span class="todo">〔待补充〕</span>。
+  </div>
+
+  <!-- ===== 本周主动经营贡献 ===== -->
+  <section class="hero-section">
+    <div class="hero-title"><span>★</span>本周主动经营贡献</div>
+    <div class="hero-sub">本周实报 2 项（上限3项）· 按「发现什么 → 主动做了什么 → 最终结果 → 创造/节省什么价值 → 下一步怎么推进」汇报</div>
+
+    <!-- 贡献一 -->
+    <div class="contrib-card">
+      <div class="contrib-head">贡献一：从33份评分中跑出一个反直觉结论——"寻宝体验"越强的店，年轻人越不来</div>
+      <div class="contrib-body">
+        <div class="chain">
+          <div class="chain-row">
+            <div class="chain-label">发现什么</div>
+            <div class="chain-val">
+              考察表填完后，如果只看单店总分，结论会是"尾货仓库不行、零售店行"，这个结论没什么用。我把 11 家店 × 3 人评分做了<b>跨维度交叉计算</b>，发现一个反直觉的事实：
+              <b>寻宝体验得分最高的三家（Via Trading 15.0、Bins&nbsp;&amp;&nbsp;Deals 15.0、Jerry 14.0，满分15），恰好是年轻人吸引力最低的三家（8.7、8.0、6.0）</b>，两项差距高达 42–53 个百分点。
+              这说明<b>"寻宝"这个机制本身是有效的，被毁掉的是呈现方式</b>——而这正好是我负责的陈列与视觉范围。
+            </div>
+          </div>
+          <div class="chain-row">
+            <div class="chain-label">主动做了什么</div>
+            <div class="chain-val">
+              没有停在"记录我看到了什么"，而是：<br>
+              ① 把33份评分按维度重新拆解，找出得分矛盾点；<br>
+              ② 把55条顾客行为记录按"店铺感觉"（普通零售店/仓库感/混合）重新分组统计，验证视觉呈现与顾客行为的关联；<br>
+              ③ 据此产出老板要求的 <b>5个可学视觉设计 / 3个不可复制低端做法 / 3个年轻化尾货创意</b>（详见事项二），每一条都挂上数据依据，而不是凭印象。
+            </div>
+          </div>
+          <div class="chain-row">
+            <div class="chain-label">最终结果</div>
+            <div class="chain-val">
+              跑出一组可直接指导装修与陈列决策的量化结论：<br>
+              <span class="val-highlight">"仓库感"门店 vs "普通零售店"：社媒拍摄率 20% vs 70%，年轻客占比 10% vs 60%，平均客单价 $21.8 vs $36.2（低 40%）。</span>
+            </div>
+          </div>
+          <div class="chain-row">
+            <div class="chain-label">创造 / 节省什么价值</div>
+            <div class="chain-val">
+              <ul>
+                <li><b>给"该不该省装修钱"这个争论提供了数据边界。</b>上周我从大多百得出"装修可以省"，本周数据补上了另一半：省是可以省，但<b>一旦省到让顾客觉得"这是个仓库"，客单价直接掉40%、年轻客几乎不进来、社媒免费流量归零</b>。这条线不能越过——这比单纯说"装修要好看"更有决策价值。</li>
+                <li><b>为尾货品类的引入扫清了顾虑。</b>数据显示低分不是因为"卖尾货"，而是因为破损、无分类、无人接待。尾货本身可做，前提是品控和陈列跟上。</li>
+                <li>具体可换算的金额影响 <span class="todo">〔待测算〕</span>——需结合首店客流预估与客单价目标一并测算，下周随选址方案一起给出。</li>
+              </ul>
+            </div>
+          </div>
+          <div class="chain-row">
+            <div class="chain-label">下一步怎么推进</div>
+            <div class="chain-val">
+              ① 把"不能越过的视觉底线"写成一页《SnackLoop 陈列与视觉标准 v1》，作为装修方案的验收依据；<br>
+              ② 用这条标准反向复核我们现有装修方案，标出哪些花销可砍、哪些绝不能砍；<br>
+              ③ 与选址方案合并，输出"客单价目标 → 视觉投入下限"的对应关系。
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- 贡献二 -->
+    <div class="contrib-card">
+      <div class="contrib-head">贡献二：主动开发 Pasadena 选址，接触到 80 N Lake Ave 这个较合适的点位</div>
+      <div class="contrib-body">
+        <div class="chain">
+          <div class="chain-row">
+            <div class="chain-label">发现什么</div>
+            <div class="chain-val">目前选址主要集中在圣盖博谷华人商圈（The Source OC、圣盖博一带），客群结构相对单一。Pasadena 商圈客群更年轻、消费力更强、且非华人客群比例更高，与我们"年轻化、体验化"的定位更匹配，值得作为备选商圈开发——<b>这不是被分配的选址任务，是我主动扩展的方向。</b></div>
+          </div>
+          <div class="chain-row">
+            <div class="chain-label">主动做了什么</div>
+            <div class="chain-val">在 Pasadena 主动寻找并筛选了多个店铺点位，逐一联系对方，从中筛出条件较合适的一个：<b>80 N Lake Ave, Pasadena, CA 91101</b>。</div>
+          </div>
+          <div class="chain-row">
+            <div class="chain-label">最终结果</div>
+            <div class="chain-val">已建立联系并初判该点位<b>条件较合适</b>；具体面积、租金、管理费、租期、可租时间等关键条件 <span class="todo">〔待补充〕</span>，本周尚未拿到完整报价。</div>
+          </div>
+          <div class="chain-row">
+            <div class="chain-label">创造 / 节省什么价值</div>
+            <div class="chain-val">
+              为选址增加了一个<b>不同客群结构的备选商圈</b>，避免只在单一商圈里比价、失去议价空间；同时 Pasadena 的客群画像与本周调研中得分最高的 Beauty Corner 两店（年轻人吸引力 11.7/15、复购能力 12.7/15）客群高度重合，验证了该商圈与我们业态的匹配度。
+              具体可节省的租金金额 <span class="todo">〔待测算〕</span>，需拿到报价后与现有候选点位横向对比才能得出。
+            </div>
+          </div>
+          <div class="chain-row">
+            <div class="chain-label">下一步怎么推进</div>
+            <div class="chain-val">
+              ① 本周内向对方索取完整租赁条件（面积/租金/NNN/租期/免租期）；<br>
+              ② 补做该点位的<b>实地客流观察</b>（按本次考察表同一口径，便于与11家店横向对比）；<br>
+              ③ 与 The Source OC 候选铺位做<b>一页纸对比表</b>，给出推荐意见与理由。
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== 事项一：门店调研 ===== -->
+  <section>
+    <div class="work-card">
+      <h3><span class="item-no">事项一</span>11家门店实地调研 — 陈列与视觉（本人负责板块）</h3>
+
+      <div class="field">
+        <div class="label">本周目标</div>
+        <div class="content">随团队完成南加州多商圈门店与尾货供应商实地考察，本人负责<b>陈列与视觉</b>板块，并按要求交付「5个可学视觉设计 / 3个不可复制低端做法 / 3个年轻化尾货创意」。</div>
+      </div>
+
+      <div class="field">
+        <div class="label">最终做出了什么结果</div>
+        <div class="content">
+          完成 <b>11家门店</b>实地考察（8/17 周一 6家、8/18 周二 3家、8/19 周三 2家），覆盖零售考察8家、供应商仓库3家；完成 33份评分、55条顾客行为记录，并完成交叉分析。综合排名如下（三人平均分）：
+        </div>
+        <table class="data">
+          <thead><tr><th>排名</th><th>门店</th><th>类型</th><th class="num">总分/100</th><th class="num">寻宝/15</th><th class="num">年轻人/15</th><th class="num">效率/10</th><th class="num">可复制/10</th></tr></thead>
+          <tbody>
+            <tr class="hi"><td class="num">1</td><td>Beauty Corner SG店</td><td>零售</td><td class="num">82.0</td><td class="num">12.0</td><td class="num">11.7</td><td class="num">10.0</td><td class="num">9.0</td></tr>
+            <tr class="hi"><td class="num">2</td><td>Beauty Corner RH店</td><td>零售</td><td class="num">81.3</td><td class="num">12.0</td><td class="num">11.7</td><td class="num">10.0</td><td class="num">9.0</td></tr>
+            <tr><td class="num">3</td><td>Tokyo Central West Covina</td><td>零售</td><td class="num">73.7</td><td class="num">9.3</td><td class="num">10.0</td><td class="num">10.0</td><td class="num">8.0</td></tr>
+            <tr><td class="num">4</td><td>Mitsuwa Marketplace（三和）</td><td>零售</td><td class="num">71.7</td><td class="num">9.0</td><td class="num">11.3</td><td class="num">10.0</td><td class="num">6.0</td></tr>
+            <tr><td class="num">5</td><td>Shiny Snacks 零食仓库</td><td>零售</td><td class="num">71.7</td><td class="num">10.7</td><td class="num">10.3</td><td class="num">6.7</td><td class="num">7.7</td></tr>
+            <tr><td class="num">6</td><td>Via Trading</td><td>供应商</td><td class="num">65.3</td><td class="num">15.0</td><td class="num">8.7</td><td class="num">6.0</td><td class="num">3.7</td></tr>
+            <tr><td class="num">7</td><td>All Wholesale</td><td>供应商</td><td class="num">64.7</td><td class="num">13.0</td><td class="num">6.3</td><td class="num">4.3</td><td class="num">5.7</td></tr>
+            <tr><td class="num">8</td><td>dd's DISCOUNTS Chino</td><td>零售</td><td class="num">64.3</td><td class="num">10.0</td><td class="num">10.3</td><td class="num">7.3</td><td class="num">7.3</td></tr>
+            <tr><td class="num">9</td><td>Bins &amp; Deals</td><td>零售</td><td class="num">59.3</td><td class="num">15.0</td><td class="num">8.0</td><td class="num">6.3</td><td class="num">4.3</td></tr>
+            <tr class="lo"><td class="num">10</td><td>Jerry 尾货仓库</td><td>供应商</td><td class="num">47.0</td><td class="num">14.0</td><td class="num">0.7↓</td><td class="num">0.7</td><td class="num">0.7</td></tr>
+            <tr class="lo"><td class="num">11</td><td>TrendingHi Outlet</td><td>零售</td><td class="num">46.7</td><td class="num">8.0</td><td class="num">8.3</td><td class="num">1.0</td><td class="num">2.7</td></tr>
+          </tbody>
+        </table>
+        <div class="content" style="font-size:12px;color:#888;">注：Jerry 年轻人吸引力实际为 6.0/15，上表"效率/可复制"两列 0.7 为三人均分（1/1/0 与 1/1/0）。</div>
+      </div>
+
+      <div class="field">
+        <div class="label">核心发现：寻宝体验与年轻人吸引力严重背离</div>
+        <div class="bar-wrap">
+          <div class="bar-row"><div class="bar-name">Via Trading</div><div class="bar-track"><span class="bar-a" style="width:300px;"></span><br><span class="bar-b" style="width:174px;"></span></div><div class="bar-val">寻宝100% / 年轻58%</div></div>
+          <div class="bar-row"><div class="bar-name">Bins &amp; Deals</div><div class="bar-track"><span class="bar-a" style="width:300px;"></span><br><span class="bar-b" style="width:160px;"></span></div><div class="bar-val">寻宝100% / 年轻53%</div></div>
+          <div class="bar-row"><div class="bar-name">Jerry 尾货仓库</div><div class="bar-track"><span class="bar-a" style="width:280px;"></span><br><span class="bar-b" style="width:120px;"></span></div><div class="bar-val">寻宝93% / 年轻40%</div></div>
+          <div class="bar-row"><div class="bar-name">All Wholesale</div><div class="bar-track"><span class="bar-a" style="width:260px;"></span><br><span class="bar-b" style="width:126px;"></span></div><div class="bar-val">寻宝87% / 年轻42%</div></div>
+          <div class="bar-row"><div class="bar-name">Beauty Corner（两店）</div><div class="bar-track"><span class="bar-a" style="width:240px;"></span><br><span class="bar-b" style="width:234px;"></span></div><div class="bar-val">寻宝80% / 年轻78%</div></div>
+          <div class="legend"><span class="sw" style="background:#F5C842;"></span>寻宝体验　<span class="sw" style="background:#F0508C;"></span>年轻人吸引力</div>
+        </div>
+        <div class="content">
+          <b>只有 Beauty Corner 做到了两项同时高分且几乎持平（80% / 78%）。</b>其余四家高寻宝门店，两项差距全部在 42 个百分点以上。这说明年轻人不是不喜欢翻找，而是<b>不接受"翻找"必须以脏、乱、破损为代价</b>。
+        </div>
+      </div>
+
+      <div class="field">
+        <div class="label">顾客行为验证：视觉呈现直接决定客单价与免费流量</div>
+        <table class="data">
+          <thead><tr><th>店铺感觉</th><th class="num">社媒拍摄率</th><th class="num">年轻客（≤25岁）占比</th><th class="num">平均客单价</th></tr></thead>
+          <tbody>
+            <tr class="hi"><td>普通零售店（4家）</td><td class="num">70%</td><td class="num">60%</td><td class="num">$36.2</td></tr>
+            <tr><td>混合（Tokyo Central）</td><td class="num">60%</td><td class="num">60%</td><td class="num">$40.6</td></tr>
+            <tr class="lo"><td>仓库感（2家有客流）</td><td class="num">20%</td><td class="num">10%</td><td class="num">$21.8</td></tr>
+          </tbody>
+        </table>
+        <div class="content">
+          三项指标同向变化，没有例外。<b>"仓库感"让客单价低 40%、年轻客占比只剩六分之一、社媒免费曝光基本归零。</b>
+          其中 Bins&nbsp;&amp;&nbsp;Deals 5位受访顾客年龄全部为 41–60 / 60+，<b>年轻客 0 人</b>，平均客单价 $16.4 为全场最低。
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== 事项二：5/3/3 交付 ===== -->
+  <section>
+    <div class="work-card">
+      <h3><span class="item-no">事项二</span>指定交付物：5个可学 / 3个不可复制 / 3个年轻化创意</h3>
+
+      <div class="field">
+        <div class="label">① 5个值得 SnackLoop 学习的视觉设计</div>
+
+        <div class="pt">
+          <div class="pt-t">1. Tokyo Central：高密度 poster + 清晰分类导视</div>
+          <div class="pt-e">数据依据：我给该店商品吸引力 18/20，是全场11家最高分；三人评语一致提到"产品宣传力度大，poster很多，分类清晰""产品分类清晰"。顾客行为记录中，有顾客明确"受海报和主题促销吸引"进入特价区。</div>
+          <div class="pt-a"><b>可学：</b>用大量 poster 承担"告知+引导"双重功能，让顾客在通道里随时知道自己在哪个区、这个区在推什么。这是低成本、高见效的视觉手段，且与我们上周从大多百学到的"SAVE% 打满"可以合并成一套价格牌规范。</div>
+        </div>
+
+        <div class="pt">
+          <div class="pt-t">2. Beauty Corner（两店）：把高话题商品放在入口第一视觉</div>
+          <div class="pt-e">数据依据：SG店入口第一视觉是"收银台与零食区"，RH店是"收银台与盲盒"。两店年轻人吸引力并列全场第一（11.7/15）、复购能力 SG 14.0 / RH 13.3（满分15）、可复制性 9.0/10 全场最高。</div>
+          <div class="pt-a"><b>可学：</b>入口不留给货架，留给<b>最有话题度的品类</b>（盲盒/网红零食）。这两家店是本次唯一"寻宝与年轻人吸引力同时高分"的样本，而且可复制性评分最高——<b>这是我们最应该对标的门店，不是那些大超市。</b></div>
+        </div>
+
+        <div class="pt">
+          <div class="pt-t">3. Mitsuwa：入口摆件做视觉锚点</div>
+          <div class="pt-e">数据依据：该店入口第一视觉记录为"门口的摆件"；顾客行为记录中，一组"青少年+家庭"顾客的进店路径是"被入口宣传吸引后进入食品区"；该店社媒拍摄率 5/5 满分，为全场最高之一。</div>
+          <div class="pt-a"><b>可学：</b>入口一个有存在感的实体摆件，就能同时完成"拦下路人"和"制造拍照点"两件事，成本远低于整店装修。可与我们已有的打卡立牌方案合并落地。</div>
+        </div>
+
+        <div class="pt">
+          <div class="pt-t">4. Bins &amp; Deals：用"连排 bins"本身作为入口第一视觉</div>
+          <div class="pt-e">数据依据：该店入口第一视觉记录为"连排的bins"，寻宝体验 15/15 满分；三人一致认可"每天都有特价商品，玩法比较有趣"。</div>
+          <div class="pt-a"><b>可学：</b>陈列结构本身就是招牌——顾客一眼就知道"这里可以翻"。<b>只学这个视觉语言和每日降价机制，不学它的货</b>（见下方不可复制第2条）。</div>
+        </div>
+
+        <div class="pt">
+          <div class="pt-t">5. All Wholesale：把视觉资产做到店外（社媒前置获客）</div>
+          <div class="pt-e">数据依据：这是一家仓库业态、现场 0 顾客的批发商，但三人评语高度一致："社媒运营的很成功""网上宣传知名度大""社交媒体宣传力度大，正规，有人接待"。其复购能力我给到 15/15 满分。</div>
+          <div class="pt-a"><b>可学：</b>即使门店本身是仓库形态，靠社媒内容一样能建立专业形象和稳定客源。<b>视觉投入不必全压在装修上，一部分应该投在可传播的内容资产上</b>——这条也支撑了我上周提出的"装修从简、钱挪到别处"的判断。</div>
+        </div>
+      </div>
+
+      <div class="field">
+        <div class="label">② 3个绝对不能复制的低端做法</div>
+
+        <div class="pt bad">
+          <div class="pt-t">1. 无分类堆砌、没有商品目录</div>
+          <div class="pt-e">数据依据：Jerry 尾货仓库可复制性 0.7/10、门店效率 0.7/10，均为全场最低，总分 47.0 排第10；评语"东西太多，没有任何分类和产品目录""箱子堆成山很难找产品""无人接待"。Via Trading 同样"没有产品分类，非常难找"，可复制性仅 3.7/10。</div>
+          <div class="pt-a"><b>为什么不能复制：</b>无分类会同时摧毁两件事——顾客找不到货（转化下降）、员工也找不到货（人效下降）。Jerry 寻宝体验高达 14.0/15，却因为这一条把总分拖到倒数第二。<b>"乱"不等于"寻宝"，这是两回事。</b></div>
+        </div>
+
+        <div class="pt bad">
+          <div class="pt-t">2. 破损 / 旧货直接上架</div>
+          <div class="pt-e">数据依据：Bins &amp; Deals 寻宝体验 15/15 满分，总分却只有 59.3 排第9；三人风险评语一致指向同一点——"东西都是旧东西""很多商品都破损""大多产品有质量问题和破损"。结果：年轻客 0/5、平均客单价 $16.4 全场最低。</div>
+          <div class="pt-a"><b>为什么不能复制：</b>这是本次最清晰的一条因果链——<b>破损商品把一个满分的寻宝机制直接废掉了</b>。年轻客群对品相的容忍度远低于中老年客群，我们的目标客群恰恰是前者。</div>
+        </div>
+
+        <div class="pt bad">
+          <div class="pt-t">3. 无人接待 + 环境卫生失控</div>
+          <div class="pt-e">数据依据：TrendingHi Outlet 门店效率 1.0/10、总分 46.7 全场垫底，评语"无人接待，产品杂乱""地理位置不够好，很冷清"，考察当天现场 0 顾客。另一侧，Tokyo Central 虽然排名第3（73.7），但两位评分人都单独点名"店内卫生情况不佳，有难闻刺激性气味"——<b>这是唯一一个连高分店都被扣分的项目。</b></div>
+          <div class="pt-a"><b>为什么不能复制：</b>无人接待会让门店效率直接归零；气味问题则是"再好的陈列也救不回来"的硬伤，因为它在顾客形成任何视觉印象之前就已经生效。这两条属于<b>底线级问题，不是优化项</b>。</div>
+        </div>
+      </div>
+
+      <div class="field">
+        <div class="label">③ 3个可以升级成"年轻化尾货体验"的创意</div>
+        <div class="content" style="margin-bottom:12px;">
+          全部基于同一个数据机会：<b>寻宝机制已被验证有效（3家满分/近满分），但它目前只被低端业态占用着，还没有人把它做成年轻化体验。这是一个空位。</b>
+        </div>
+
+        <div class="pt new">
+          <div class="pt-t">创意1：把 Bin 机制年轻化 —— "盲盒式尾货 Bin"</div>
+          <div class="pt-e">机会依据：Bins &amp; Deals 寻宝 15/15 但年轻客 0/5、客单价 $16.4；而 Beauty Corner 同样有 12.0/15 的寻宝分，年轻客占比却达 60–80%、客单价 $28–36。<b>说明市场缺的不是 bin，是"干净、好看、有话题的 bin"。</b></div>
+          <div class="pt-a"><b>怎么做：</b>保留 Bins&nbsp;&amp;&nbsp;Deals 被三人认可的"每日降价"玩法，但把商品换成<b>正品尾货 + 潮玩/零食组合包</b>，用统一的品牌色包装袋装好再投入 bin——顾客翻的是"包装好的惊喜"而不是散落的旧货。这样既保住寻宝乐趣，又绕开了破损与脏乱的致命伤。</div>
+        </div>
+
+        <div class="pt new">
+          <div class="pt-t">创意2：品控分级上架制度（A/B 级双轨）</div>
+          <div class="pt-e">机会依据：本次三家尾货供应商（Via Trading、All Wholesale、Jerry）寻宝分均在 13.0 以上，货源丰富、价格有优势；被否掉的原因全部集中在品相和分类，而非商品本身。Via Trading 还有一个正面细节被记录下来："每个物品都有相应的价格和sku"。</div>
+          <div class="pt-a"><b>怎么做：</b>建立入库分级——<b>A级（品相完好）</b>进正常货架按正价销售；<b>B级（有瑕疵）</b>进特价 Bin 并<b>主动明示瑕疵点</b>。明示反而能建立信任，也能避免 Bins&nbsp;&amp;&nbsp;Deals 那种"翻到破损货"的负面体验。这套制度可以直接接到我已建的采购库系统上，作为入库标准字段。</div>
+        </div>
+
+        <div class="pt new">
+          <div class="pt-t">创意3：给尾货区做"可拍摄性"设计</div>
+          <div class="pt-e">机会依据：普通零售店社媒拍摄率 70%、仓库感仅 20%，差距 3.5 倍；且社媒拍摄率高的门店，客单价同步高出 40%。<b>社媒曝光是唯一一项"零边际成本的流量"，仓库形态等于主动放弃它。</b></div>
+          <div class="pt-a"><b>怎么做：</b>尾货区不做成仓库货架，而是做成有主题、有灯光、有拍照点的<b>"寻宝专区"</b>——用统一色系的 bin、头顶灯带、一块主题背景墙和一个"今日战利品"拍照位。参考 Mitsuwa 入口摆件（社媒拍摄率5/5）与我们之前在 Pop Mart 学到的灯条氛围做法。<b>投入很小，但把一个 20% 拍摄率的区域拉到 70%，等于白拿一批免费曝光。</b></div>
+        </div>
+      </div>
+
+      <div class="field">
+        <div class="label">主动发现的新问题</div>
+        <div class="issue-box">
+          <b>问题1：计划走访16家，实际完整记录只有11家。</b>以下5家在本周计划名单内，但考察表中没有对应的评分与观察记录：Beauty&nbsp;Corner&nbsp;CH店、CA&nbsp;Liquidators、Massive&nbsp;Mart&nbsp;Liquidators、David&nbsp;Shi批发仓、LA&nbsp;Center&nbsp;Closeout。需确认是未走访、还是走访了但未回填表格。<br><br>
+          <b>问题2：照片清单大面积空缺。</b>考察表的「照片与视频拍摄清单」中，绝大多数条目的照片列为空。本周的视觉结论目前是<b>靠评分和文字备注推导出来的，缺少画面佐证</b>——这对"陈列与视觉"这个板块是硬伤，后续做装修方案评审时说服力会打折扣。
+        </div>
+      </div>
+
+      <div class="field">
+        <div class="label">我的判断与建议（不只交问题）</div>
+        <div class="content">
+          <ul>
+            <li><b>对标对象要换。</b>我们之前一直在看大超市（Mitsuwa、Tokyo Central）和标杆潮玩店（Pop Mart），但本次数据显示，<b>真正和我们体量、客群、可复制性最接近的是 Beauty Corner 这类小型宝藏零售店</b>（可复制性 9.0/10 全场最高，年轻人吸引力并列第一）。建议后续把它列为首要对标对象，并再去做一次深度回访，重点拍照补齐视觉细节。</li>
+            <li><b>Beauty Corner 的短板恰好是我们的机会。</b>三人对它的一致风险评语是"空间小，东西都堆在一起""产品堆砌成山""产品摆放混乱，需要询问店员"。也就是说：<b>它靠选品赢，输在陈列。</b>我们如果选品对标它、陈列做得比它好，就能在同一客群里做出差异化——这是本次调研我认为最有价值的一条结论。</li>
+            <li><b>关于照片缺失，我的处理建议是</b>：不重走11家（成本太高），而是<b>只对排名前3和倒数前2的5家店做补拍</b>——前3家学正面做法、后2家留反面案例，其余用现有评分数据即可。这样用最小成本补上证据链。</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="field">
+        <div class="label">未完成事项：原因 / 解决办法 / 新完成时间</div>
+        <div class="content">
+          <ul>
+            <li><b>5家门店记录缺失</b> — 原因：待确认是未走访还是未回填；解决办法：本周内与小陈、小赵核对行程记录，未走访的排入下周补访，已走访的当天补填；新完成时间：下周三前</li>
+            <li><b>视觉照片证据缺失</b> — 原因：本次考察以填表评分为主，拍摄清单未同步执行；解决办法：按上述建议只补拍5家关键门店；新完成时间：下周内</li>
+            <li><b>《陈列与视觉标准 v1》尚未成文</b> — 原因：本周精力用于数据分析与结论提炼；解决办法：结论已完成，直接成文即可；新完成时间：下周内</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="field">
+        <div class="label">下周准备交付的明确结果</div>
+        <div class="delivery-grid">
+          <div class="delivery-row">
+            <div class="delivery-cell"><div class="dl">交付物 1</div><div class="dv">《SnackLoop 陈列与视觉标准 v1》一页纸，含"不可越过的视觉底线"清单</div></div>
+            <div class="delivery-cell"><div class="dl">交付物 2</div><div class="dv">Beauty Corner 两店深度回访报告 + 补拍5家关键门店照片</div></div>
+            <div class="delivery-cell"><div class="dl">交付物 3</div><div class="dv">"年轻化尾货专区"落地方案（含品控分级标准与陈列草图）</div></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== 事项三：官网 ===== -->
+  <section>
+    <div class="work-card">
+      <h3><span class="item-no">事项三</span>公司官网内容体系更新上线</h3>
+
+      <div class="field">
+        <div class="label">本周目标</div>
+        <div class="content">按公司要求完成 YUANCHEN HEALTH TECHNOLOGY INC 官网内容更新，使其能对外承接供应商、地产方、加盟及合作方的接洽需求。</div>
+      </div>
+
+      <div class="field">
+        <div class="label">最终做出了什么结果</div>
+        <div class="content">
+          官网已按要求改好并上线，主标语确定为 <b>"Building the Next Generation of Retail Experiences"</b>，完成 9 个板块的内容重构：
+          <ul>
+            <li><b>Our Business</b> — SnackLoop（新零售门店）与 BaoPop（原创IP潮玩）双主线定位；</li>
+            <li><b>What We Are Building</b> — 直营门店、供应链体系、运营标准化、原创IP、会员体系、数字化采购与库存管理、多店复制 7 个在建方向；</li>
+            <li><b>Our Vision</b> — 从洛杉矶出发到可规模化零售网络，列明直营/连锁/加盟/IP授权/供应链合作等 7 条扩张路径；</li>
+            <li><b>Why We Are Different</b> — Curated Products / Experience-Driven Retail / Strong Supply Chain / Scalable Operations / Shared Growth 五项差异化；</li>
+            <li><b>Partnerships &amp; Supplier Partnerships</b> — 明确列出可合作的品类范围，并写明公司会评估 closeout、overstock 及 qualified liquidation inventory；</li>
+            <li><b>Careers / Contact Us / Our Belief</b> — 招聘导向、联系入口与公司理念。</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="field">
+        <div class="label">主动发现的机会</div>
+        <div class="idea-box">
+          官网 Supplier Partnerships 板块已明确写入接受 <b>closeout / overstock / qualified liquidation inventory</b>，这与本周实地考察的三家尾货供应商（Via Trading、All Wholesale、Jerry）业务完全对口。
+          建议把官网这一段<b>作为对接尾货供应商时的正式背书材料</b>——本周考察中 All Wholesale 之所以被三人评价为"正规、专业"，很大程度就来自它有官网和成熟社媒。<b>我们同样需要这个"看起来正规"的凭证来提高议价能力和被认真对待的程度。</b>
+        </div>
+      </div>
+
+      <div class="field">
+        <div class="label">当前存在的问题</div>
+        <div class="issue-box">官网目前为中文内容为主，但面向的地产方、批发商、进口商等合作对象中有相当比例为非中文母语。建议后续补充英文版本，否则 Partnerships 板块的实际接洽转化会受限。</div>
+      </div>
+
+      <div class="field">
+        <div class="label">下周准备交付的明确结果</div>
+        <div class="delivery-grid">
+          <div class="delivery-row">
+            <div class="delivery-cell"><div class="dl">交付物 1</div><div class="dv">官网英文版内容（优先 Partnerships / Supplier / Contact 三个板块）</div></div>
+            <div class="delivery-cell"><div class="dl">交付物 2</div><div class="dv">供应商接洽用一页纸公司介绍（从官网内容提炼）</div></div>
+            <div class="delivery-cell"><div class="dl">负责人 / 时间</div><div class="dv">小林 / <span class="todo">待与老板确认优先级</span></div></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <div class="foot-logo"><span class="snack">Snack</span><span class="loop">Loop</span></div>
+    小林 · 本周工作周报 · 2026年8月17日–8月21日 · 内部资料，请勿外传
+  </footer>
+</div>
+</body>
+</html>
