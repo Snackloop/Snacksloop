@@ -1,0 +1,298 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>工作周报｜2026年8月24日—8月28日</title>
+  <style>
+    :root {
+      --navy: #17324d;
+      --blue: #236a8d;
+      --cyan: #4ca6b8;
+      --pale: #eaf4f6;
+      --light: #f5f8fa;
+      --ink: #263746;
+      --muted: #607483;
+      --line: #d7e2e8;
+      --paper: #fff;
+    }
+
+    * { box-sizing: border-box; }
+
+    html { background: #e9eef2; }
+
+    body {
+      margin: 0;
+      color: var(--ink);
+      font-family: "Noto Sans CJK SC", "PingFang SC", "Microsoft YaHei", Arial, sans-serif;
+      font-size: 14px;
+      line-height: 1.72;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    .page {
+      position: relative;
+      width: 8.5in;
+      min-height: 11in;
+      margin: 22px auto;
+      padding: .68in .72in .58in;
+      background: var(--paper);
+      box-shadow: 0 8px 28px rgba(23, 50, 77, .12);
+      overflow: hidden;
+    }
+
+    .page::before {
+      content: "";
+      position: absolute;
+      inset: 0 0 auto;
+      height: .18in;
+      background: var(--navy);
+    }
+
+    .page-footer {
+      position: absolute;
+      left: .72in;
+      right: .72in;
+      bottom: .22in;
+      display: flex;
+      justify-content: space-between;
+      border-top: 1px solid var(--line);
+      padding-top: 7px;
+      color: var(--muted);
+      font-size: 10px;
+    }
+
+    h1 {
+      margin: 16px 0 0;
+      color: var(--navy);
+      font-size: 34px;
+      line-height: 1.2;
+      letter-spacing: .02em;
+    }
+
+    .en-title {
+      margin: 3px 0 14px;
+      color: var(--muted);
+      font-size: 11px;
+      letter-spacing: .04em;
+    }
+
+    h2 {
+      margin: 19px 0 7px;
+      color: var(--navy);
+      font-size: 19px;
+      line-height: 1.35;
+    }
+
+    h3 {
+      margin: 12px 0 4px;
+      color: var(--blue);
+      font-size: 15px;
+    }
+
+    p { margin: 0 0 8px; }
+
+    ul {
+      margin: 4px 0 9px;
+      padding-left: 22px;
+    }
+
+    li { margin: 2px 0; }
+
+    .meta {
+      display: grid;
+      grid-template-columns: 1.4fr .8fr 1.5fr;
+      margin: 0 0 14px;
+      border: 1px solid #bfd8de;
+      background: var(--pale);
+    }
+
+    .meta-item {
+      min-height: 58px;
+      padding: 8px 13px;
+      border-right: 1px solid #cfe1e5;
+    }
+
+    .meta-item:last-child { border-right: 0; }
+    .meta-label { color: var(--muted); font-size: 11px; }
+    .meta-value { margin-top: 1px; color: var(--navy); font-weight: 700; }
+
+    .summary, .closing {
+      margin: 12px 0 15px;
+      padding: 11px 15px;
+      border: 1px solid #cde3e7;
+      background: #f0f8f8;
+      color: var(--navy);
+      font-weight: 700;
+    }
+
+    .summary { border-left: 5px solid var(--cyan); }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin: 9px 0 15px;
+      font-size: 12.5px;
+      line-height: 1.55;
+    }
+
+    th {
+      padding: 9px 11px;
+      border: 1px solid var(--navy);
+      background: var(--navy);
+      color: #fff;
+      text-align: left;
+    }
+
+    td {
+      padding: 9px 11px;
+      border: 1px solid var(--line);
+      vertical-align: top;
+    }
+
+    tbody tr:nth-child(even) { background: var(--light); }
+    td:first-child { color: var(--navy); font-weight: 700; }
+    .value-table td:first-child { width: 28%; }
+    .plan-table th:nth-child(1) { width: 18%; }
+    .plan-table th:nth-child(2) { width: 50%; }
+    .plan-table th:nth-child(3) { width: 32%; }
+
+    .numbered p { margin-bottom: 7px; }
+
+    @media (max-width: 850px) {
+      html { background: #fff; }
+      body { font-size: 14px; }
+      .page {
+        width: 100%;
+        min-height: 0;
+        margin: 0;
+        padding: 54px 20px 64px;
+        box-shadow: none;
+        overflow: visible;
+      }
+      .page-footer { left: 20px; right: 20px; }
+      .meta { grid-template-columns: 1fr; }
+      .meta-item { border-right: 0; border-bottom: 1px solid #cfe1e5; }
+      .meta-item:last-child { border-bottom: 0; }
+      .table-wrap { overflow-x: auto; }
+      table { min-width: 650px; }
+    }
+
+    @media print {
+      @page { size: letter; margin: 0; }
+      html, body { background: #fff; }
+      .page {
+        width: 8.5in;
+        height: 11in;
+        min-height: 11in;
+        margin: 0;
+        box-shadow: none;
+        break-after: page;
+        page-break-after: always;
+      }
+      .page:last-child { break-after: auto; page-break-after: auto; }
+    }
+  </style>
+</head>
+<body>
+  <main>
+    <section class="page">
+      <h1>工作周报</h1>
+      <div class="en-title">WEEKLY BUSINESS REPORT</div>
+
+      <div class="meta">
+        <div class="meta-item"><div class="meta-label">汇报周期</div><div class="meta-value">2026年8月24日—8月28日</div></div>
+        <div class="meta-item"><div class="meta-label">汇报人</div><div class="meta-value">小陈</div></div>
+        <div class="meta-item"><div class="meta-label">本周重点</div><div class="meta-value">ASD展会供应商调研</div></div>
+      </div>
+
+      <div class="summary">本周赴拉斯维加斯参加ASD展会，集中接触了来自不同国家、覆盖不同商品品类的供应商，了解其产品及合作信息并留存联系方式，为后续供应商筛选、选品比较和采购谈判建立了新的资源基础。</div>
+
+      <h2>一｜本周工作目标与完成结果</h2>
+      <p>本周工作重点是通过ASD展会拓展供应商资源，了解不同国家和不同品类供应商的产品特点、供货方式及合作条件，并为后续筛选适合SnackLoop定位的供应商和商品做好信息准备。</p>
+      <ul>
+        <li>已完成ASD展会现场调研，与多个国家及不同品类的供应商进行了沟通。</li>
+        <li>了解了供应商的主要产品、品类特点、合作方向及后续对接方式。</li>
+        <li>已留存相关供应商联系方式，建立后续筛选与跟进基础。</li>
+        <li>明确下一阶段将从广泛接触转向重点筛选和定向联系。</li>
+      </ul>
+
+      <h2>二｜ASD展会供应商调研情况</h2>
+      <p>本周前往拉斯维加斯参加ASD展会。展会供应商来源广、商品覆盖面较大，为集中了解市场新品、不同国家商品特色及潜在供货渠道提供了较高效率的线下沟通机会。</p>
+      <h3>现场重点了解内容</h3>
+      <ul>
+        <li>供应商所在国家或主要货源地区，以及其核心经营品类。</li>
+        <li>主推产品、特色商品及可能适合门店销售的商品方向。</li>
+        <li>产品供应方式、合作流程及后续取得目录和报价的渠道。</li>
+        <li>供应商联系方式及负责后续业务对接的联系人信息。</li>
+      </ul>
+      <p>目前展会阶段以扩大供应商资源和收集第一手信息为主，尚未直接确定最终合作对象。后续需要把现场取得的信息统一整理，再根据门店定位、商品需求、采购成本及合作条件完成筛选，避免因展会现场信息量大而过早作出采购决定。</p>
+
+      <footer class="page-footer"><span>SnackLoop｜工作周报</span><span>1</span></footer>
+    </section>
+
+    <section class="page">
+      <h2>三｜本周工作结果与经营价值</h2>
+      <div class="table-wrap">
+        <table class="value-table">
+          <thead><tr><th>经营成果</th><th>实际价值</th></tr></thead>
+          <tbody>
+            <tr><td>供应商资源扩充</td><td>接触不同国家和不同品类的供应商，扩大后续选品与采购的候选范围。</td></tr>
+            <tr><td>市场信息补充</td><td>通过面对面交流，更直观地了解各类产品方向和供应特点，为判断市场机会提供参考。</td></tr>
+            <tr><td>后续联系渠道建立</td><td>已留存联系方式，后续可针对有潜力的供应商索取目录、报价及详细合作条件。</td></tr>
+            <tr><td>筛选方向明确</td><td>下一阶段将从数量积累转向匹配度、成本、稳定性与风险的综合判断。</td></tr>
+          </tbody>
+        </table>
+      </div>
+
+      <h2>四｜供应商筛选与跟进标准</h2>
+      <p>展会后不以供应商数量作为唯一成果，而是按照统一标准判断是否值得进入下一轮沟通。</p>
+      <ul>
+        <li><strong>品类匹配度：</strong>商品是否符合SnackLoop的门店定位及目标顾客需求。</li>
+        <li><strong>产品机会：</strong>是否具备差异化、包装吸引力、销售潜力和持续复购可能。</li>
+        <li><strong>成本与毛利：</strong>结合报价、运输及其他附加成本，判断预计毛利是否合理。</li>
+        <li><strong>合作条件：</strong>核对起订量、付款方式、样品政策、交货周期及退换货规则。</li>
+        <li><strong>供货稳定性：</strong>判断商品能否持续补货，避免核心商品供应中断。</li>
+        <li><strong>合规与质量：</strong>食品重点核对标签、保质期、储存与进口信息；其他商品核对授权、质量与售后条件。</li>
+      </ul>
+
+      <h2>五｜当前问题与风险判断</h2>
+      <p>ASD展会收集到的信息较多，不同供应商提供的资料完整程度和报价口径可能不一致，因此暂时不能只根据现场介绍或产品外观决定合作。</p>
+      <ul>
+        <li>对缺少正式报价、产品目录或合作条款的供应商，应先补齐资料再判断。</li>
+        <li>对起订量过高、交货周期不明确或无法稳定补货的商品，应谨慎推进。</li>
+        <li>对标签、来源、品牌授权或质量说明不清楚的商品，不进入采购候选范围。</li>
+        <li>对看起来新颖但预计需求、售价和毛利不明确的产品，先小批量测试，不盲目大量采购。</li>
+      </ul>
+
+      <footer class="page-footer"><span>SnackLoop｜工作周报</span><span>2</span></footer>
+    </section>
+
+    <section class="page">
+      <h2>六｜本周主动经营贡献</h2>
+      <div class="numbered">
+        <p>1. 从多国家、多品类的展会资源中扩充供应商池，为公司减少对单一渠道的依赖。</p>
+        <p>2. 在现场沟通后保留完整的后续联系渠道，使展会信息能够继续转化为报价、样品和采购候选。</p>
+        <p>3. 提前明确筛选标准，避免因展会商品数量多、展示吸引力强而产生非理性采购。</p>
+      </div>
+
+      <h2>七｜下周工作计划与明确交付</h2>
+      <div class="table-wrap">
+        <table class="plan-table">
+          <thead><tr><th>工作事项</th><th>具体行动</th><th>计划交付</th></tr></thead>
+          <tbody>
+            <tr><td>供应商筛选</td><td>整理展会供应商资料，按国家、品类及匹配度进行分类，并筛选优先联系对象。</td><td>供应商初步筛选表及优先级名单</td></tr>
+            <tr><td>重点供应商跟进</td><td>联系入选供应商，进一步索取产品目录、正式报价、起订量、交货及合作条件。</td><td>重点供应商跟进记录及待补资料清单</td></tr>
+            <tr><td>爱购库存盘点</td><td>清点并整理现有库存，核对商品数量、存放位置、保质期、破损及滞销情况。</td><td>库存盘点记录及异常商品清单</td></tr>
+            <tr><td>爱购门店清洁</td><td>完成店内清洁和基础整理，改善库存区域与经营环境，为后续商品管理做好准备。</td><td>完成清洁与区域整理</td></tr>
+          </tbody>
+        </table>
+      </div>
+
+      <div class="closing">下周工作重点：把展会收集到的供应商资源转化为可比较、可联系、可推进的候选名单；同时完成爱购库存与环境的基础整理。</div>
+
+      <footer class="page-footer"><span>SnackLoop｜工作周报</span><span>3</span></footer>
+    </section>
+  </main>
+</body>
+</html>

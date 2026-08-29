@@ -1,0 +1,557 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<title>小林 — 本周工作周报（2026年8月24日–8月28日）</title>
+<style>
+  html{background:#0a0a0a;}
+  body{margin:0;background:#111111;color:#ffffff;font-family:Arial,"PingFang SC","Microsoft YaHei",sans-serif;line-height:1.8;}
+  .canvas{width:1080px;margin:0 auto;padding:0 0 80px;}
+
+  .logo-bar{padding:26px 60px;display:flex;align-items:center;justify-content:space-between;border-bottom:1px solid #2A2A2A;}
+  .logo{font-size:26px;font-weight:bold;}
+  .logo .snack{color:#fff;} .logo .loop{color:#F5C842;}
+  .logo .x{color:#fff;font-weight:normal;margin:0 10px;font-size:20px;} .logo .baopop{color:#F0508C;}
+  .logo-tag{font-size:11px;color:#CCCCCC;letter-spacing:.25em;text-transform:uppercase;}
+
+  header.cover{text-align:center;padding:70px 60px 50px;}
+  header.cover .eyebrow{letter-spacing:.4em;font-size:12px;color:#F0508C;text-transform:uppercase;font-weight:bold;}
+  header.cover h1{font-size:36px;margin:18px 0 10px;color:#F5C842;font-weight:bold;}
+  header.cover .date{color:#CCCCCC;font-size:14px;}
+  .gold-rule{height:3px;width:100%;background:#F5C842;margin-top:34px;}
+
+  .person-header{display:flex;align-items:center;gap:16px;padding:40px 60px 0;}
+  .avatar{width:52px;height:52px;border-radius:50%;background:#2A2A2A;color:#F5C842;font-weight:bold;font-size:20px;display:flex;align-items:center;justify-content:center;border:2px solid #F5C842;flex-shrink:0;}
+  .person-meta h2{margin:0;font-size:22px;color:#F5C842;font-weight:bold;}
+  .person-meta .role{font-size:12.5px;color:#999;margin-top:3px;}
+  .period-tag{display:inline-block;background:#1C1C1C;border:1px solid #2A2A2A;color:#CCCCCC;font-size:12px;padding:5px 12px;border-radius:20px;margin:18px 60px 0;}
+
+  section{padding:44px 60px;}
+  section + section{border-top:1px solid #2A2A2A;}
+
+  .hero-section{background:linear-gradient(180deg,#1a1508 0%,#111111 100%);}
+  .hero-title{font-size:24px;color:#F5C842;font-weight:bold;margin:0 0 6px;display:flex;align-items:center;gap:12px;}
+  .hero-sub{font-size:12.5px;color:#999;margin-bottom:26px;}
+
+  .contrib-card{background:#1C1C1C;border:1px solid #F5C842;border-radius:10px;margin-bottom:26px;overflow:hidden;}
+  .contrib-head{background:#F5C842;color:#111;padding:12px 24px;font-size:16px;font-weight:bold;}
+  .contrib-body{padding:20px 24px;}
+  .chain{display:table;width:100%;}
+  .chain-row{display:table-row;}
+  .chain-label{display:table-cell;width:130px;padding:9px 14px 9px 0;vertical-align:top;font-size:12px;font-weight:bold;color:#F0508C;white-space:nowrap;border-bottom:1px solid #262626;}
+  .chain-val{display:table-cell;padding:9px 0;vertical-align:top;font-size:13.5px;color:#DDDDDD;border-bottom:1px solid #262626;}
+  .chain-row:last-child .chain-label,.chain-row:last-child .chain-val{border-bottom:none;}
+  .chain-val ul{margin:2px 0 0;padding-left:18px;} .chain-val li{margin:3px 0;}
+  .val-highlight{color:#F5C842;font-weight:bold;}
+
+  .work-card{background:#1C1C1C;border:1px solid #2A2A2A;border-radius:10px;padding:26px 28px;margin-bottom:36px;}
+  .work-card h3{font-size:19px;color:#F5C842;font-weight:bold;margin:0 0 20px;display:flex;align-items:center;gap:10px;}
+  .work-card h3 .item-no{background:#F5C842;color:#111;font-size:12px;font-weight:bold;border-radius:4px;padding:3px 9px;}
+
+  .field{margin:18px 0;}
+  .field .label{font-size:12px;color:#F0508C;font-weight:bold;letter-spacing:.05em;margin-bottom:6px;}
+  .field .content{font-size:14px;color:#DDDDDD;}
+  .field .content ul{margin:4px 0 0;padding-left:20px;} .field .content li{margin:5px 0;}
+
+  .todo{color:#F0508C;font-weight:bold;}
+  .issue-box{background:#241414;border-left:4px solid #F0508C;border-radius:0 6px 6px 0;padding:12px 16px;font-size:13.5px;color:#e0b8bf;}
+  .idea-box{background:#0f1f16;border-left:4px solid #4ade80;border-radius:0 6px 6px 0;padding:12px 16px;font-size:13.5px;color:#b8e0c8;}
+  .idea-box b{color:#4ade80;}
+  .alert-box{background:#2a1f08;border-left:4px solid #F5C842;border-radius:0 6px 6px 0;padding:14px 18px;font-size:13.5px;color:#e8d5a8;}
+  .alert-box b{color:#F5C842;}
+
+  .delivery-grid{display:table;width:100%;border-spacing:14px 0;margin:0 -14px;}
+  .delivery-row{display:table-row;}
+  .delivery-cell{display:table-cell;width:33.33%;background:#151515;border:1px solid #2A2A2A;border-radius:6px;padding:12px 14px;vertical-align:top;}
+  .delivery-cell .dl{font-size:11px;color:#999;margin-bottom:4px;}
+  .delivery-cell .dv{font-size:13px;color:#fff;font-weight:bold;}
+
+  table.data{width:100%;border-collapse:collapse;margin:14px 0;font-size:12.5px;}
+  table.data th,table.data td{border:1px solid #2A2A2A;padding:9px 11px;text-align:left;vertical-align:top;}
+  table.data th{background:#2A2A2A;color:#F5C842;font-weight:bold;}
+  table.data td{color:#CCCCCC;background:#151515;}
+  .num{text-align:center;white-space:nowrap;}
+
+  /* Q cards */
+  .q{background:#151515;border:1px solid #2A2A2A;border-radius:8px;margin-bottom:14px;overflow:hidden;}
+  .q-head{background:#1f1f1f;padding:12px 18px;font-size:14.5px;font-weight:bold;color:#F5C842;border-bottom:1px solid #2A2A2A;}
+  .q-head .qn{background:#F0508C;color:#fff;font-size:11px;padding:2px 8px;border-radius:10px;margin-right:9px;}
+  .q-body{padding:14px 18px;}
+  .q-line{display:table;width:100%;margin:7px 0;}
+  .q-l{display:table-cell;width:118px;font-size:11.5px;color:#F0508C;font-weight:bold;vertical-align:top;padding-right:12px;white-space:nowrap;}
+  .q-v{display:table-cell;font-size:12.8px;color:#DDDDDD;vertical-align:top;}
+  .q-v ul{margin:0;padding-left:16px;} .q-v li{margin:2px 0;}
+  .q-crit{background:#241414;border-left:3px solid #F0508C;padding:8px 12px;margin-top:9px;font-size:12.3px;color:#e0b8bf;border-radius:0 4px 4px 0;}
+  .q-crit b{color:#ff8fa0;}
+
+  .notice{background:#1C1C1C;border:1px dashed #F5C842;border-radius:8px;padding:16px 20px;font-size:13px;color:#F5C842;margin:0 60px 30px;}
+
+  footer{text-align:center;font-size:12px;color:#666;padding:36px 60px 0;}
+  footer .foot-logo{margin-bottom:8px;}
+  footer .foot-logo .snack{color:#fff;font-weight:bold;} footer .foot-logo .loop{color:#F5C842;font-weight:bold;}
+</style>
+</head>
+<body>
+<div class="canvas">
+
+  <div class="logo-bar">
+    <div class="logo"><span class="snack">Snack</span><span class="loop">Loop</span><span class="x">×</span><span class="baopop">BaoPop</span></div>
+    <div class="logo-tag">Weekly Report</div>
+  </div>
+
+  <header class="cover">
+    <div class="eyebrow">本周工作周报</div>
+    <h1>小林 — 本周工作周报</h1>
+    <div class="date">2026年8月24日 — 8月28日</div>
+    <div class="gold-rule"></div>
+  </header>
+
+  <div class="person-header">
+    <div class="avatar">林</div>
+    <div class="person-meta">
+      <h2>小林</h2>
+      <div class="role">采购 / 陈列与视觉 / 供应链资料完整性与整体进度</div>
+    </div>
+  </div>
+  <div class="period-tag">按《团队工作周报标准》独立汇报 · 本周聚焦"做成了什么"</div>
+
+  <div class="notice">
+    ⚠ 数据缺口说明：本周主线为展会走访与门店承接，<b>大量关键数字尚未回填</b>（展会接触供应商家数、拿到目录/报价家数、爱购店租赁条件、打样问题项数等），已在正文中逐处标注 <span class="todo">〔待补充〕</span>。按老板要求，"联系了很多供应商"这类表述不能作为结果交付，<b>下周复盘前我会把这些数字补齐再重发一版</b>。
+  </div>
+
+  <!-- ===== 本周主动经营贡献 ===== -->
+  <section class="hero-section">
+    <div class="hero-title"><span>★</span>本周主动经营贡献</div>
+    <div class="hero-sub">本周实报 2 项（上限3项）· 按「发现什么 → 主动做了什么 → 最终结果 → 创造/节省什么价值 → 下一步怎么推进」汇报</div>
+
+    <!-- 贡献一 -->
+    <div class="contrib-card">
+      <div class="contrib-head">贡献一：识别出"7个核心问题的真实截止日不是开业后，而是POS选型和开业前布线"</div>
+      <div class="contrib-body">
+        <div class="chain">
+          <div class="chain-row">
+            <div class="chain-label">发现什么</div>
+            <div class="chain-val">
+              老板提出的 7 个核心问题，表面上是"开业后用数据跑出来"。但我在拆解执行方法时发现一个关键问题：
+              <b>其中 5 项（Q1、Q2、Q3、Q4、Q6）完全依赖 POS 的数据结构，Q5 依赖门口客流计数硬件——这些一旦开业时没配好，开业后是补不回来的</b>，因为没有基线、没有对照组、历史交易也无法追溯打标签。
+              也就是说：这7个问题真正的死线不是开业后的复盘会，而是<b>POS选型定稿日和开业前布线日</b>。这一点如果没人提出来，很可能到开业第二个月才发现数据取不出来。
+            </div>
+          </div>
+          <div class="chain-row">
+            <div class="chain-label">主动做了什么</div>
+            <div class="chain-val">
+              ① 把7个问题逐项拆成「执行方法 + 需要记录的数据 + 前置条件 + 建议负责人」（完整方案见事项二）；<br>
+              ② 逐项标出<b>"开业前必须完成的前置动作"</b>，把它们从"开业后任务"提前到"60天筹备清单"里；<br>
+              ③ 汇总出一份 <b>POS 选型必须满足的功能清单</b>，用于回去和 POS 团队重新确认——我此前已在对接 POS 团队，正好可以直接推进。
+            </div>
+          </div>
+          <div class="chain-row">
+            <div class="chain-label">最终结果</div>
+            <div class="chain-val">
+              产出 7 项完整验证方案，并识别出 <span class="val-highlight">6 项开业前必须完成的前置动作</span>：会员系统上线、POS品类标签体系、POS购物篮明细导出、客流计数器安装、陈列位置编号、模块化成功标准定义。
+            </div>
+          </div>
+          <div class="chain-row">
+            <div class="chain-label">创造 / 节省什么价值</div>
+            <div class="chain-val">
+              <ul>
+                <li><b>避免了一次几乎必然会发生的返工。</b>如果 POS 选型时没提"品类标签"和"购物篮明细导出"两项要求，开业后 Q2/Q3/Q4/Q6 四个问题全部无法回答，届时要么换 POS、要么人工补录几个月数据；</li>
+                <li><b>Q5（雕像/拍照引流）如果开业前不装客流计数器，这题永远无解</b>——因为没有"进店人数"这个分母，事后任何统计都只能靠感觉；</li>
+                <li>老板说"这7个答案的价值远超第一家店赚$100万"，那么<b>保证这7个答案取得到，就是保住这份价值的前提</b>。具体可避免的返工成本 <span class="todo">〔待测算〕</span>，需拿到POS改造/更换报价后给出。</li>
+              </ul>
+            </div>
+          </div>
+          <div class="chain-row">
+            <div class="chain-label">下一步怎么推进</div>
+            <div class="chain-val">
+              ① 下周与 POS 团队逐条确认功能清单，拿到<b>书面确认</b>而不是口头答复；<br>
+              ② 把 6 项前置动作插入 60 天开业倒排计划，明确每项的截止日；<br>
+              ③ 与小赵、小陈对齐 7 项的负责人分工，建立每周复盘机制。
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- 贡献二 -->
+    <div class="contrib-card">
+      <div class="contrib-head">贡献二：展会主动开发供应商资源（阿纳海姆 + 拉斯维加斯，周一至周四）</div>
+      <div class="contrib-body">
+        <div class="chain">
+          <div class="chain-row">
+            <div class="chain-label">发现什么</div>
+            <div class="chain-val">
+              我们目前的供应商来源集中在线上联系与本地走访两条路径，缺少<b>一次性接触大量新供应商、且能当面看样品谈条件</b>的渠道。展会是筛选效率最高的场景，尤其在 619 需要在 60 天内完成首批 500 SKU 选品的压力下。
+            </div>
+          </div>
+          <div class="chain-row">
+            <div class="chain-label">主动做了什么</div>
+            <div class="chain-val">周一至周四赴<b>阿纳海姆</b>与<b>拉斯维加斯</b>参展，现场接触并联系供应商，收集产品资料与联系方式。</div>
+          </div>
+          <div class="chain-row">
+            <div class="chain-label">最终结果</div>
+            <div class="chain-val">
+              <span class="todo">〔关键数字待补充〕</span>——本项目前只能表述为"接触了较多供应商"，不符合老板要求的交付标准。需补齐：<b>接触总家数 / 留下联系方式家数 / 当场拿到产品目录家数 / 拿到报价家数 / 判断值得重点跟进的家数及名单 / 有美国现货的家数 / 可少量试单的家数</b>。
+            </div>
+          </div>
+          <div class="chain-row">
+            <div class="chain-label">创造 / 节省什么价值</div>
+            <div class="chain-val">
+              潜在价值在于为 1万+SKU 商品池补充新货源、并在首批 500 SKU 选品中引入竞价对象。
+              但<b>在数字补齐前，这项还不能算作已兑现的贡献</b>，我不做提前估算。
+            </div>
+          </div>
+          <div class="chain-row">
+            <div class="chain-label">下一步怎么推进</div>
+            <div class="chain-val">
+              ① <b>本周末前完成展会名片与资料整理</b>，按「主要品类 / 是否有美国现货 / 是否可试单 / 目录是否到手」四项分类；<br>
+              ② 按 A/B/C 三类归档（与白总供应商用同一套标准，避免两套档案），A 类立即索取完整目录与价格表；<br>
+              ③ 目录到手后直接导入我已建的采购库系统，纳入跨供应商比价。
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== 事项一：619 七问 ===== -->
+  <section>
+    <div class="work-card">
+      <h3><span class="item-no">事项一</span>619 核心7问 — 数据验证方案设计（本周指定交付物）</h3>
+
+      <div class="field">
+        <div class="label">本周目标</div>
+        <div class="content">按老板要求，把 7 个核心问题分别整理成「执行方法 + 需要记录的数据 + 负责人」，作为后续每周复盘的基础框架。</div>
+      </div>
+
+      <div class="field">
+        <div class="label">最终做出了什么结果</div>
+        <div class="content">7 项方案已全部拆解完成，每项均标注了<b>开业前必须完成的前置条件</b>（红色框）。负责人一栏为我的建议分工，<span class="todo">需三人对齐后确认</span>。</div>
+
+        <div class="q">
+          <div class="q-head"><span class="qn">Q1</span>什么零食让顾客每周回来？</div>
+          <div class="q-body">
+            <div class="q-line"><div class="q-l">执行方法</div><div class="q-v">开业第一天即启用会员/手机号绑定消费记录；按单个SKU统计复购周期与复购率；开业首月建立基线，之后每周滚动对比，筛出"钩子商品"（顾客首单买了它、之后反复回来）。</div></div>
+            <div class="q-line"><div class="q-l">需记录数据</div><div class="q-v"><ul><li>每笔交易：会员ID + SKU + 日期 + 金额</li><li>每个SKU的 7日 / 14日 / 30日复购率</li><li>复购顾客的<b>首单SKU构成</b>（识别引流钩子）</li><li>复购顾客占比、复购顾客平均消费频次</li></ul></div></div>
+            <div class="q-line"><div class="q-l">建议负责人</div><div class="q-v">小陈（数据）+ 小赵（零食选品侧解读）</div></div>
+            <div class="q-crit"><b>开业前必须完成：</b>会员系统上线并与POS打通。若开业首月没有会员识别，前一个月的复购数据将永久缺失，无法回溯。</div>
+          </div>
+        </div>
+
+        <div class="q">
+          <div class="q-head"><span class="qn">Q2</span>第三方盲盒到底占销售多少？</div>
+          <div class="q-body">
+            <div class="q-line"><div class="q-l">执行方法</div><div class="q-v">在POS中为<b>所有</b>SKU预先打好品类标签（第三方盲盒 / BaoPop自有 / 零食 / 毛绒 / PVC / 日用 / 美妆等）；按周导出分品类销售构成。<b>不只看销售额占比，同时看毛利占比和坪效</b>——盲盒占用陈列面积大，只看销售额会高估它的价值。</div></div>
+            <div class="q-line"><div class="q-l">需记录数据</div><div class="q-v"><ul><li>分品类：日/周销售额、销售额占比、<b>毛利额占比</b></li><li>分品类<b>坪效</b>（销售额 ÷ 该品类陈列面积）</li><li>盲盒品类的动销率与周转天数</li></ul></div></div>
+            <div class="q-line"><div class="q-l">建议负责人</div><div class="q-v">小陈（数据）+ 小林（陈列面积测算）</div></div>
+            <div class="q-crit"><b>开业前必须完成：</b>POS品类标签体系定稿 + 每个陈列位编号并登记面积。没有陈列面积数据就算不出坪效，而坪效才是决定"要不要扩大盲盒区"的真正依据。</div>
+          </div>
+        </div>
+
+        <div class="q">
+          <div class="q-head"><span class="qn">Q3</span>BaoPop 自己卖不卖得动？</div>
+          <div class="q-body">
+            <div class="q-line"><div class="q-l">执行方法</div><div class="q-v">与第三方盲盒做<b>同位置、同陈列条件的对照测试</b>，并按周做<b>位置轮换</b>（A/B位互换）。不做轮换的话，一旦BaoPop卖得差，无法区分是"产品不行"还是"位置不好"，这个结论就白跑了。</div></div>
+            <div class="q-line"><div class="q-l">需记录数据</div><div class="q-v"><ul><li>BaoPop vs 第三方盲盒：<b>单位陈列面积销售额</b></li><li>动销率（有销售的SKU数 ÷ 总SKU数）</li><li>复购率、退货率</li><li>轮换前后各自的销售变化（分离位置影响）</li></ul></div></div>
+            <div class="q-line"><div class="q-l">建议负责人</div><div class="q-v">小林（对照实验设计与位置轮换执行）+ 小陈（数据）</div></div>
+            <div class="q-crit"><b>开业前必须完成：</b>确定A/B对照位并编号、约定轮换周期。<b>这是7项里最容易被做废的一项</b>——如果开业后BaoPop随便找个角落摆，数据就没有任何解释力。</div>
+          </div>
+        </div>
+
+        <div class="q">
+          <div class="q-head"><span class="qn">Q4</span>毛绒是不是比 PVC 更强？</div>
+          <div class="q-body">
+            <div class="q-line"><div class="q-l">执行方法</div><div class="q-v"><b>必须按价格带分层比较</b>。毛绒普遍单价高于PVC，直接比总销售额会得出错误结论。应在同价格带内（如 $10–20、$20–30）对比两者表现。</div></div>
+            <div class="q-line"><div class="q-l">需记录数据</div><div class="q-v"><ul><li>分价格带的：动销率、周转天数、毛利率</li><li>客单价贡献（含毛绒订单 vs 含PVC订单的平均金额）</li><li><b>破损率 / 退货率</b>（毛绒易脏污，这是隐性成本）</li><li>陈列占用面积（毛绒占位大，需计入坪效）</li></ul></div></div>
+            <div class="q-line"><div class="q-l">建议负责人</div><div class="q-v">小赵（选品）+ 小陈（数据）</div></div>
+            <div class="q-crit"><b>开业前必须完成：</b>入库时即录入价格带、材质（毛绒/PVC）、占位面积三个字段。可直接加进我已建的采购库系统作为标准字段，成本很低。</div>
+          </div>
+        </div>
+
+        <div class="q">
+          <div class="q-head"><span class="qn">Q5</span>雕像 / 拍照到底带来多少进店？</div>
+          <div class="q-body">
+            <div class="q-line"><div class="q-l">执行方法</div><div class="q-v">门口安装<b>客流计数器</b>获取"进店人数"这一分母；雕像/拍照点做<b>有/无 或 换位置的AB测试</b>（例如某几日撤除或移位，对比进店人数变化）；拍照点设置扫码领券或专属话题标签，追踪社媒外溢。</div></div>
+            <div class="q-line"><div class="q-l">需记录数据</div><div class="q-v"><ul><li>日进店人数、日成交单数 → <b>进店转化率</b></li><li>雕像"有/无"两种状态下的进店人数差值</li><li>拍照点扫码次数、带话题标签的社媒发帖数</li><li>拍照点扫码顾客的后续成交率</li></ul></div></div>
+            <div class="q-line"><div class="q-l">建议负责人</div><div class="q-v">小林（装置与AB测试设计）+ 小陈（数据）</div></div>
+            <div class="q-crit"><b>开业前必须完成：客流计数器采购与安装。</b>这是7项中唯一需要额外硬件的一项，也是最容易漏掉的一项。<b>没有分母，这题永远算不出来</b>，事后只能靠"感觉人变多了"，无法用于决策第二店要不要复制雕像。</div>
+          </div>
+        </div>
+
+        <div class="q">
+          <div class="q-head"><span class="qn">Q6</span>哪种商品组合把客单价做到 $20 / $25 / $30？</div>
+          <div class="q-body">
+            <div class="q-line"><div class="q-l">执行方法</div><div class="q-v">从POS导出<b>完整购物篮明细</b>（每笔订单包含哪些SKU），做品类关联分析；按订单金额分档（&lt;$15 / $15–20 / $20–25 / $25–30 / &gt;$30），拆解各档的典型组合，找出"把客单价从$15推到$25的那个品类"。</div></div>
+            <div class="q-line"><div class="q-l">需记录数据</div><div class="q-v"><ul><li>每笔订单的完整SKU组合与总金额</li><li>订单金额分布直方图</li><li>各金额档的品类组合频次（关联规则）</li><li>加购率最高的搭配品类（用于设计组合陈列与套餐）</li></ul></div></div>
+            <div class="q-line"><div class="q-l">建议负责人</div><div class="q-v">小陈（数据分析）+ 小林（据结论调整组合陈列）</div></div>
+            <div class="q-crit"><b>开业前必须完成：确认POS支持导出订单级购物篮明细。</b>部分POS只能导出SKU汇总销量、不能导出"哪些商品在同一笔订单里"，那样这题直接无解。<b>这一条必须在POS选型时书面确认。</b></div>
+          </div>
+        </div>
+
+        <div class="q">
+          <div class="q-head"><span class="qn">Q7</span>619 成熟后，哪些模块可以原样复制到第二店？</div>
+          <div class="q-body">
+            <div class="q-line"><div class="q-l">执行方法</div><div class="q-v">开业前先把 619 拆成可独立评估的<b>模块</b>：选品结构 / 陈列方案 / 引流装置 / 会员体系 / 供应链 / 人员配置 / 开业物料 / 视觉标准。每个模块<b>预先定义"成功标准"</b>（达到什么指标算跑通），开业后按月打分。</div></div>
+            <div class="q-line"><div class="q-l">需记录数据</div><div class="q-v"><ul><li>每模块：投入成本、产出（销售/客流/毛利）</li><li><b>可标准化程度</b>（是否依赖特定人/特定供应商）</li><li><b>对本地商圈的依赖度</b>（换个商圈还成不成立）</li><li>复制该模块所需的最低条件清单</li></ul></div></div>
+            <div class="q-line"><div class="q-l">建议负责人</div><div class="q-v">小林（模块拆分与标准定义）+ 三人共同评分</div></div>
+            <div class="q-crit"><b>开业前必须完成：模块划分与成功标准定稿。</b>如果事后再拆模块，各模块的投入成本已经混在一起，无法归因，也就无法判断第二店该复制哪一块。</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="field">
+        <div class="label">主动发现的关键风险</div>
+        <div class="alert-box">
+          <b>7 项里有 6 项的成败，取决于开业前的系统与硬件配置，而不是开业后的执行。</b>汇总如下，建议全部插入 60 天倒排计划：
+          <ol style="margin:8px 0 0;padding-left:20px;">
+            <li>会员系统上线并与POS打通（Q1）</li>
+            <li>POS品类标签体系定稿（Q2/Q3/Q4）</li>
+            <li>POS支持订单级购物篮明细导出（Q6）— <b>必须书面确认</b></li>
+            <li>门口客流计数器采购安装（Q5）— <b>唯一需要额外硬件</b></li>
+            <li>陈列位编号 + 面积登记（Q2/Q3坪效计算）</li>
+            <li>模块划分与成功标准定稿（Q7）</li>
+          </ol>
+        </div>
+      </div>
+
+      <div class="field">
+        <div class="label">我的判断与建议</div>
+        <div class="content">
+          <ul>
+            <li><b>建议把第3项和第4项列为最高优先级。</b>因为这两项一旦漏掉，事后<b>完全无法补救</b>（购物篮明细无法追溯、进店人数无法回填），而其余几项即使晚做，还能靠人工补录部分数据；</li>
+            <li><b>建议这7项的周复盘从筹备期就开始，而不是等开业。</b>筹备期复盘的内容是"前置条件完成到哪一步"，开业后才切换成"数据跑出什么结果"。这样能保证开业当天所有埋点都就位；</li>
+            <li><b>关于老板提到的"人工选品 vs AI选品实际比较"</b>：这本身就是一个设计良好的对照实验，建议把它正式纳入 Q7 的评估模块之一——如果比较结果显示某一种方式明显更优，这个方法论本身就是可以复制到第二店的资产。执行上建议用同一批候选商品、分别用两种方式各选出500 SKU，开业后对比两组的动销率与坪效。</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="field">
+        <div class="label">未完成事项：原因 / 解决办法 / 新完成时间</div>
+        <div class="content">
+          <ul>
+            <li><b>负责人分工尚未确认</b> — 原因：需三人共同对齐，本周因参展未碰面；解决办法：下周一开工时三人过一遍表格逐项认领；新完成时间：下周一</li>
+            <li><b>POS功能清单尚未与POS团队确认</b> — 原因：本周在展会；解决办法：下周直接约POS团队逐条过；新完成时间：下周内</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== 事项二：白总供应链 ===== -->
+  <section>
+    <div class="work-card">
+      <h3><span class="item-no">事项二</span>白总供应链资源开发 — 整体进度与资料完整性（本人负责板块）</h3>
+
+      <div class="field">
+        <div class="label">本周目标</div>
+        <div class="content">按分工（小赵牵头开发、<b>小林负责整体进度与资料完整性</b>、小陈负责录入商品数据库），启动白总移交的供应商资源开发，建立统一档案标准。</div>
+      </div>
+
+      <div class="field">
+        <div class="label">最终做出了什么结果</div>
+        <div class="content">
+          本周因周一至周四参展，该项<b>尚未实质启动</b>。我作为进度负责人，先把档案标准和分类口径定下来，避免小赵开始跟进后各自记录格式不一、后期无法汇总。
+          白总供应商总家数 <span class="todo">〔待补充〕</span>，需先向白总索取完整名单才能排进度。
+        </div>
+        <div class="content" style="margin-top:12px;">统一档案字段（按老板要求的11项，可直接作为表头）：</div>
+        <table class="data">
+          <thead><tr><th>字段</th><th>说明</th><th>为什么要它</th></tr></thead>
+          <tbody>
+            <tr><td>主要品类</td><td>零食/日韩/礼品/日用/潮玩/毛绒等</td><td>用于A/B/C分类与品类补位判断</td></tr>
+            <tr><td>产品目录</td><td>是否到手、文件格式</td><td>A类必须拿到，才能进商品池</td></tr>
+            <tr><td>采购价</td><td>报价单或价格表</td><td>跨供应商比价的基础</td></tr>
+            <tr><td>MOQ 起订量</td><td>件数 / 金额门槛</td><td>决定能否小批量试水</td></tr>
+            <tr><td>付款方式</td><td>预付/账期/COD</td><td>直接影响现金流</td></tr>
+            <tr><td>交期</td><td>下单到收货天数</td><td>影响开业备货倒排</td></tr>
+            <tr><td>可否少量试单</td><td>是/否 + 最小试单量</td><td><b>首批500 SKU 选品的关键筛选项</b></td></tr>
+            <tr><td>是否有新品</td><td>新品频率与渠道</td><td>决定长期合作价值</td></tr>
+            <tr><td>是否有美国现货</td><td>是/否 + 仓库位置</td><td><b>有现货 = 交期短、可补货，权重最高</b></td></tr>
+            <tr><td>售后配合</td><td>破损/错发处理方式</td><td>影响实际持有成本</td></tr>
+            <tr><td>过去哪些商品卖得好</td><td>爆款清单</td><td>白总的历史经验，是这次资产交接里最难复制的部分</td></tr>
+          </tbody>
+        </table>
+      </div>
+
+      <div class="field">
+        <div class="label">我的判断与建议</div>
+        <div class="content">
+          <ul>
+            <li><b>A/B/C 分类建议用明确规则，而不是主观印象</b>，否则三个人分类口径会不一致。我的建议规则：<br>
+              <b>A类（重点开发）</b>：有美国现货 <b>且</b> 可少量试单 <b>且</b> 品类与619定位相关；<br>
+              <b>B类（保留观察）</b>：满足其中一项或两项，但暂时不符合首批需求；<br>
+              <b>C类（暂不合作）</b>：品类完全不相关、或MOQ过高无法试单、或无法提供目录。</li>
+            <li><b>老板特别强调的一点我认同并建议写进执行标准：</b>"不要因为爱购以前没卖某个产品，就判断这个供应商对我们没价值"。所以分类时<b>不参考爱购的历史销售，只看供应商本身的品类与条件</b>——我们是在建SnackLoop自己的供应链。</li>
+            <li><b>建议展会供应商与白总供应商用同一套档案标准和同一套A/B/C规则</b>，最终汇入同一个商品池。否则会出现两套表、两套口径，后面合并时又要返工一次。</li>
+            <li><b>关于"每个供应商必须有明确负责人"</b>：建议在档案表中直接加一列"负责人"和一列"最近跟进日期"，我作为进度负责人每周检查这两列，空白的即视为无人跟进——用机制而不是靠提醒来避免"大家都在跟、最后没人跟到底"。</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="field">
+        <div class="label">未完成事项：原因 / 解决办法 / 新完成时间</div>
+        <div class="content">
+          <ul>
+            <li><b>白总供应商完整名单尚未到手</b> — 原因：本周参展，未与白总对接；解决办法：下周一即向白总索取完整名单与联系方式；新完成时间：下周一</li>
+            <li><b>供应商档案尚未开始填写</b> — 原因：名单未到、且需先定标准（本周已完成标准定义）；解决办法：名单到手后由小赵按标准逐家跟进，我每周核对完整度；新完成时间：<span class="todo">待名单到手后排期</span></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="field">
+        <div class="label">下周准备交付的明确结果</div>
+        <div class="delivery-grid">
+          <div class="delivery-row">
+            <div class="delivery-cell"><div class="dl">交付物 1</div><div class="dv">白总供应商完整名单 + 档案表模板（含负责人/跟进日期列）</div></div>
+            <div class="delivery-cell"><div class="dl">交付物 2</div><div class="dv">A/B/C 分类规则定稿（展会+白总供应商统一适用）</div></div>
+            <div class="delivery-cell"><div class="dl">交付物 3</div><div class="dv">每家供应商明确到人的负责人分配表</div></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== 事项三：爱购门店承接 ===== -->
+  <section>
+    <div class="work-card">
+      <h3><span class="item-no">事项三</span>爱购门店承接 — 租赁完成、盘货、货架与选品</h3>
+
+      <div class="field">
+        <div class="label">本周目标</div>
+        <div class="content">完成门店租赁并启动店内资产盘点，同步推进货架采购规划与首批选品准备。</div>
+      </div>
+
+      <div class="field">
+        <div class="label">最终做出了什么结果</div>
+        <div class="content">
+          <ul>
+            <li><b>爱购门店已完成租赁</b>，具体租赁条件（面积 / 月租 / NNN / 租期 / 免租期）<span class="todo">〔待补充〕</span>；</li>
+            <li>店内盘货已确定为下一步动作，<b>尚未开始</b>；</li>
+            <li>货架采购：老板明确"第二个货架是一定要买的"，需结合此前发过的规划与爱购现有条件重新给出方案，<b>本周未启动</b>；</li>
+            <li>选品：老板要求前期先从1000多个里选出 <b>500个必须店里卖的SKU</b>，且要求<b>人工选一版、AI选一版，之后用实际销售来比较</b>；本周未启动。</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="field">
+        <div class="label">主动发现的机会</div>
+        <div class="idea-box">
+          <b>盘货这件事可以一举三得，建议不要只当"清点存货"来做。</b>盘货时如果同时录入以下字段，可以顺带完成三项前置工作：
+          <ul style="margin:6px 0 0;">
+            <li>录入<b>品类标签 + 材质（毛绒/PVC）+ 价格带</b> → 直接满足 Q2/Q3/Q4 的数据前置条件；</li>
+            <li>录入<b>陈列位编号 + 占位面积</b> → 满足 Q2/Q3 的坪效计算前置条件；</li>
+            <li>盘出的现有货品可直接进采购库系统，与新供应商商品一起参与首批500 SKU 的筛选比价。</li>
+          </ul>
+          否则盘完货还要再返工录一遍标签，等于同样的活干两次。
+        </div>
+      </div>
+
+      <div class="field">
+        <div class="label">我的判断与建议</div>
+        <div class="content">
+          <ul>
+            <li><b>关于"人工选品 vs AI选品"的执行方式建议：</b>两组必须<b>用同一批候选商品池、同一套约束条件</b>（预算、品类配比、SKU数），否则比较无效。选完后两份清单封存，开业后用动销率和坪效来判定，而不是开业前争论谁选得好；</li>
+            <li><b>关于货架采购：</b>建议先完成盘货再定货架方案。因为货架数量和规格取决于实际留用的商品量与品类结构，先买货架容易买错规格——我此前实测过 The Source 候选铺位的22类既有货架尺寸，那套测量方法可以直接复用到爱购店；</li>
+            <li><b>关于优先级：</b>老板明确"当前第一优先仍是按60天计划把619开出来"。本周参展占用了周一至周四，本项四件事（盘货/货架/选品/租赁条件整理）全部未启动，<b>下周必须集中补上，否则会挤压60天主线</b>。</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="field">
+        <div class="label">未完成事项：原因 / 解决办法 / 新完成时间</div>
+        <div class="content">
+          <ul>
+            <li><b>店内盘货</b> — 原因：周一至周四参展；解决办法：下周排定盘货日程，按上述"一举三得"的字段标准执行；新完成时间：<span class="todo">待定，建议下周内启动</span></li>
+            <li><b>货架采购方案</b> — 原因：需先盘货；解决办法：盘货后按实际商品结构出方案；新完成时间：<span class="todo">盘货完成后</span></li>
+            <li><b>首批500 SKU 选品（人工版 + AI版）</b> — 原因：需先完成盘货与展会目录导入；解决办法：候选池齐备后启动双轨选品；新完成时间：<span class="todo">待定</span></li>
+            <li><b>安排小赵整理"包过来的品"价格表</b> — 老板已明确要求按截图格式整理成一张表并发文件；<b>本周尚未安排</b>；解决办法：下周一即向小赵交代并给出表格模板；新完成时间：下周一交代、<span class="todo">完成时间待与小赵确认</span></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== 事项四：邱总打样 ===== -->
+  <section>
+    <div class="work-card">
+      <h3><span class="item-no">事项四</span>邱总打样逐一反馈与成品对比</h3>
+
+      <div class="field">
+        <div class="label">本周目标</div>
+        <div class="content">对邱总送来的打样逐一检查并给出反馈，推进 BaoPop 自有产品的打样定版。</div>
+      </div>
+
+      <div class="field">
+        <div class="label">最终做出了什么结果</div>
+        <div class="content">
+          <b>已完成对邱总打样的逐一反馈。</b>具体内容 <span class="todo">〔待补充〕</span>——需补齐：打样件数、每件的问题点、要求修改项、对方承诺的返样时间。
+          <br><br>
+          另据老板本周指示，<b>邱总处又找到了成品</b>，要求"按打样的实际的，让他拍出来，看究竟是怎么回事，好好对比一下"。此项<b>尚未执行</b>。
+        </div>
+      </div>
+
+      <div class="field">
+        <div class="label">我的判断与建议</div>
+        <div class="content">
+          <ul>
+            <li><b>建议把打样反馈做成书面对比表，而不是口头逐一反馈。</b>列出：样品编号 / 问题点 / 要求修改项 / 对方确认 / 返样日期。这样既避免反复沟通同一个问题，也能在后续验收时有据可依；</li>
+            <li><b>关于新找到的成品对比：</b>建议要求邱总提供<b>同角度、同光线、带比例尺</b>的实物照片，并与打样照片并排对比。重点比对：材质手感、颜色偏差、模具细节、包装。如果成品与打样存在差异，需在下单前明确以哪一版为准；</li>
+            <li><b>这项工作直接关系到 Q3（BaoPop卖不卖得动）。</b>如果 BaoPop 产品品质与第三方盲盒有明显差距，Q3 的对照测试结果会被品质问题污染，测出来的将不是"BaoPop有没有市场"，而是"这批货做得好不好"。<b>所以打样定版必须在开业前完成，且品质要达到与第三方盲盒可比的水平</b>，这个对照实验才有意义。</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="field">
+        <div class="label">下周准备交付的明确结果</div>
+        <div class="delivery-grid">
+          <div class="delivery-row">
+            <div class="delivery-cell"><div class="dl">交付物 1</div><div class="dv">打样反馈对比表（含问题点、修改项、返样日期）</div></div>
+            <div class="delivery-cell"><div class="dl">交付物 2</div><div class="dv">邱总新成品实物照片 + 与打样的并排对比结论</div></div>
+            <div class="delivery-cell"><div class="dl">负责人 / 时间</div><div class="dv">小林 / 下周内</div></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== 下周计划 ===== -->
+  <section>
+    <div class="work-card">
+      <h3><span class="item-no">下周</span>明确交付清单</h3>
+      <div class="field">
+        <div class="content">
+          <table class="data">
+            <thead><tr><th class="num">优先级</th><th>交付内容</th><th>负责人</th><th>截止</th></tr></thead>
+            <tbody>
+              <tr><td class="num">P0</td><td>展会供应商数据回填（接触/目录/报价家数与重点名单）+ A/B/C归档</td><td>小林</td><td>下周一</td></tr>
+              <tr><td class="num">P0</td><td>7问负责人三人对齐认领 + 周复盘机制启动</td><td>三人</td><td>下周一</td></tr>
+              <tr><td class="num">P0</td><td>POS功能清单与POS团队<b>书面</b>确认（购物篮明细导出 / 品类标签）</td><td>小林</td><td>下周内</td></tr>
+              <tr><td class="num">P0</td><td>爱购店盘货启动（按品类标签+材质+价格带+陈列位编号+面积 五字段录入）</td><td>小林</td><td>下周内</td></tr>
+              <tr><td class="num">P1</td><td>向白总索取供应商完整名单 + 档案表模板下发</td><td>小林</td><td>下周一</td></tr>
+              <tr><td class="num">P1</td><td>安排小赵整理"包过来的品"价格表并出文件</td><td>小林→小赵</td><td>下周一交代</td></tr>
+              <tr><td class="num">P1</td><td>客流计数器选型与报价（Q5前置硬件）</td><td>小林</td><td>下周内</td></tr>
+              <tr><td class="num">P1</td><td>邱总打样反馈对比表 + 新成品照片对比</td><td>小林</td><td>下周内</td></tr>
+              <tr><td class="num">P2</td><td>新台湾账号注册</td><td>小林</td><td>下周内</td></tr>
+              <tr><td class="num">P2</td><td>货架采购方案（待盘货完成后）</td><td>小林</td><td>盘货后</td></tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+
+      <div class="field">
+        <div class="label">需要老板决策 / 支持的事项</div>
+        <div class="issue-box">
+          <b>1. 资源冲突提示：</b>本周参展占用周一至周四，导致爱购盘货、货架方案、白总供应商开发、选品四项全部顺延。下周同时压着：60天开业主线、白总供应链开发、7问前置动作、展会跟进、新台湾注册。<b>我作为整体进度负责人，判断下周无法全部按时完成，建议明确优先级排序</b>——我的建议是"60天开业主线 &gt; 7问前置动作 &gt; 供应链开发 &gt; 其他"，因为前两项有硬截止日且不可回溯，请老板确认。<br><br>
+          <b>2. 需要预算批准：</b>客流计数器（Q5唯一硬件前置），金额 <span class="todo">〔待报价〕</span>。<br><br>
+          <b>3. 需要确认：</b>爱购门店与619是否为同一处？两者在筹备计划中的关系需明确，以免盘货、货架、选品的工作对象搞错。
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <div class="foot-logo"><span class="snack">Snack</span><span class="loop">Loop</span></div>
+    小林 · 本周工作周报 · 2026年8月24日–8月28日 · 内部资料，请勿外传
+  </footer>
+</div>
+</body>
+</html>
