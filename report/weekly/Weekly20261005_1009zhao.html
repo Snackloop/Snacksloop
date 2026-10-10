@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<title>SnackLoop 工作周报 2026-10-05~10-09</title>
+<style>
+  :root {
+    --bg: #18140f;
+    --card: #211c17;
+    --card-soft: #28221b;
+    --line: #3c342a;
+    --ink: #f1ebe2;
+    --muted: #b6ab9b;
+    --dim: #8a7f70;
+    --gold: #d9a44d;
+    --gold-strong: #e8b96a;
+    --pink: #d6356f;
+    --orange: #e8763c;
+    --grad: linear-gradient(90deg, #e8763c 0%, #d6356f 100%);
+    --callout-bg: #2c2317;
+    --callout-border: #6e5429;
+    --good-bg: #20261d;
+    --good-border: #4f6b3f;
+  }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0;
+    background: var(--bg);
+    color: var(--ink);
+    font-family: "Noto Sans CJK SC", "PingFang SC", "Microsoft YaHei", -apple-system, sans-serif;
+    line-height: 1.75;
+    font-size: 14.5px;
+  }
+  .page { max-width: 900px; margin: 0 auto; padding: 0 0 40px; }
+
+  /* top brand bar */
+  .brandbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 40px;
+    border-bottom: 3px solid transparent;
+    border-image: var(--grad) 1;
+  }
+  .brandbar .brand { display: flex; align-items: center; gap: 10px; font-weight: 700; font-size: 16px; }
+  .brandbar .brand .mark {
+    width: 26px; height: 26px; border-radius: 7px;
+    background: var(--grad);
+    display: inline-flex; align-items: center; justify-content: center;
+    font-size: 14px; color: #1a140d; font-weight: 800;
+  }
+  .brandbar .tag { color: var(--dim); font-size: 12px; letter-spacing: 1px; text-transform: uppercase; }
+
+  /* title block */
+  .titleblock { padding: 28px 40px 0; }
+  .eyebrow { color: var(--dim); font-size: 13px; margin-bottom: 6px; }
+  .titleblock h1 { margin: 0 0 8px; font-size: 25px; letter-spacing: .5px; }
+  .daterange { color: var(--muted); font-size: 13.5px; margin-bottom: 18px; }
+
+  .person-row { display: flex; align-items: center; gap: 12px; margin-bottom: 24px; }
+  .avatar {
+    width: 42px; height: 42px; border-radius: 50%;
+    background: var(--grad);
+    display: flex; align-items: center; justify-content: center;
+    font-weight: 800; color: #1a140d; font-size: 17px;
+  }
+  .person-name { font-weight: 700; font-size: 15px; }
+  .person-tag {
+    display: inline-block; margin-top: 2px;
+    background: var(--card-soft); color: var(--muted);
+    border: 1px solid var(--line); border-radius: 100px;
+    padding: 2px 10px; font-size: 11.5px;
+  }
+
+  .content { padding: 0 40px; }
+
+  /* summary card */
+  .summary-card {
+    background: var(--card);
+    border: 1px solid var(--line);
+    border-top: 3px solid var(--gold);
+    border-radius: 10px;
+    padding: 20px 24px 22px;
+    margin-bottom: 18px;
+  }
+  .summary-card .summary-head {
+    font-weight: 700; font-size: 14.5px; color: var(--gold-strong);
+    margin-bottom: 16px; display: flex; align-items: center; gap: 6px;
+  }
+  .stat-grid {
+    display: grid; grid-template-columns: repeat(4, 1fr); gap: 14px;
+  }
+  .stat-cell {
+    background: var(--card-soft); border: 1px solid var(--line); border-radius: 8px;
+    padding: 14px 10px; text-align: center;
+  }
+  .stat-cell .num { font-size: 21px; font-weight: 800; color: var(--gold-strong); }
+  .stat-cell .label { font-size: 11.5px; color: var(--dim); margin-top: 4px; }
+
+  .top-bullets { list-style: none; margin: 18px 0 0; padding: 0; }
+  .top-bullets li {
+    position: relative; padding-left: 18px; margin: 8px 0;
+    color: var(--muted); font-size: 13.5px;
+  }
+  .top-bullets li::before {
+    content: ""; position: absolute; left: 0; top: 8px;
+    width: 6px; height: 6px; border-radius: 50%; background: var(--orange);
+  }
+  .top-bullets li b { color: var(--ink); }
+
+  /* 事项 section */
+  .item-header {
+    background: var(--grad);
+    border-radius: 8px 8px 0 0;
+    padding: 11px 20px;
+    font-weight: 700; font-size: 15px; color: #1a140d;
+    margin-top: 28px;
+  }
+  .item-body {
+    background: var(--card);
+    border: 1px solid var(--line); border-top: none;
+    border-radius: 0 0 8px 8px;
+    padding: 20px 24px 22px;
+  }
+  .goal-box {
+    background: var(--card-soft); border: 1px solid var(--line); border-radius: 7px;
+    padding: 12px 16px; font-size: 13.5px; color: var(--muted); margin-bottom: 18px;
+  }
+  .goal-box b { color: var(--ink); }
+  .result-label {
+    color: var(--pink); font-weight: 700; font-size: 13.5px; margin-bottom: 6px;
+  }
+  .result-text { color: var(--ink); font-size: 13.8px; margin: 0 0 16px; }
+
+  .callout {
+    background: var(--callout-bg); border: 1px solid var(--callout-border); border-radius: 7px;
+    padding: 13px 16px; margin: 0 0 14px; font-size: 13.3px; color: var(--muted);
+  }
+  .callout b.lead { color: var(--gold-strong); }
+  .callout.suggest b.lead { color: var(--gold-strong); }
+
+  .owner-box {
+    background: var(--card-soft); border: 1px solid var(--line); border-radius: 7px;
+    padding: 10px 16px; margin-top: 4px;
+  }
+  .owner-box .k { color: var(--dim); font-size: 12px; margin-bottom: 2px; }
+  .owner-box .v { color: var(--ink); font-weight: 700; font-size: 13.5px; }
+
+  footer.report-footer {
+    margin: 48px 40px 0; padding-top: 18px; border-top: 1px solid var(--line);
+    text-align: center;
+  }
+  footer.report-footer .fbrand { color: var(--pink); font-weight: 700; font-size: 13px; margin-bottom: 4px; }
+  footer.report-footer .fmeta { color: var(--dim); font-size: 11.5px; }
+
+  @media print {
+    body { background: var(--bg); -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+  }
+</style>
+</head>
+<body>
+<div class="page">
+
+  <div class="brandbar">
+    <div class="brand"><span class="mark">S</span>SnackLoop × BaoPop</div>
+    <div class="tag">Weekly Report · 按新标准执行</div>
+  </div>
+
+  <div class="titleblock">
+    <div class="eyebrow">本周工作周报</div>
+    <h1>Mason — 本周工作周报</h1>
+    <div class="daterange">2026年10月5日 — 10月9日</div>
+
+    <div class="person-row">
+      <div class="avatar">M</div>
+      <div>
+        <div class="person-name">Mason</div>
+        <div class="person-tag">供应商对接 / 门店运营</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="content">
+
+    <div class="summary-card">
+      <div class="summary-head">⚡ 本周核心信息一览</div>
+      <div class="stat-grid">
+        <div class="stat-cell"><div class="num">2项</div><div class="label">本周核心任务</div></div>
+        <div class="stat-cell"><div class="num">7家</div><div class="label">持续对接批发商</div></div>
+        <div class="stat-cell"><div class="num">进行中</div><div class="label">产品目录整理</div></div>
+        <div class="stat-cell"><div class="num">进行中</div><div class="label">619→808货品搬运</div></div>
+      </div>
+      <ul class="top-bullets">
+        <li>批发商后续对接<b>持续推进</b>：围绕此前新开发的 7 家专营零食供应商及既有渠道，继续沟通并整理产品目录，部分资料仍待补充</li>
+        <li>619（Flagship门店）货品转移至808<b>已启动</b>：按小陈安排开始整理并搬运货品，目前仍在进行中，尚未全部完成</li>
+        <li>本周工作重心从"供应商开发"阶段性转向"目录落地 + 门店实际运营衔接"，为后续上架销售做准备</li>
+      </ul>
+    </div>
+
+    <!-- 事项一 -->
+    <div class="item-header">事项一　批发商后续对接与产品目录整理</div>
+    <div class="item-body">
+      <div class="goal-box"><b>本周目标：</b>持续跟进已开发的批发商渠道，完成产品目录整理，为建立统一选品池做准备。</div>
+
+      <div class="result-label">实际完成结果 / 具体数字</div>
+      <p class="result-text">本周继续跟进包括此前新开发的 7 家专营零食供应商在内的批发商渠道，并开始系统整理各家的产品目录及商品资料。目前部分供应商的资料尚不完整，整理工作仍在进行中。</p>
+
+      <div class="callout">
+        <b class="lead">未完成事项：</b>产品目录尚未整理完成，部分供应商的资料仍需补充。原因：本周新增的供应商数量较多，各家资料格式不统一，整理工作量较大。解决办法：下周按供应商逐一核对，缺失资料的部分主动联系对方补充。新的完成时间：预计下周内完成目录整合。
+      </div>
+
+      <div class="callout suggest">
+        <b class="lead">我的判断与建议：</b>建议目录整理按品类分批推进——已具备完整资料的供应商先纳入选品池，缺资料的部分列入下周跟进清单，避免全部等齐后再一次性处理。
+      </div>
+
+      <div class="owner-box"><div class="k">负责人</div><div class="v">Mason</div></div>
+    </div>
+
+    <!-- 事项二 -->
+    <div class="item-header">事项二　619门店货品整理及转移至808</div>
+    <div class="item-body">
+      <div class="goal-box"><b>本周目标：</b>按小陈安排完成619门店（Flagship）货品的整理及向808门店的搬运，为808门店上架销售做准备。</div>
+
+      <div class="result-label">实际完成结果 / 具体数字</div>
+      <p class="result-text">本周对619门店现有货品进行了初步整理，并启动了向808门店的搬运工作。目前搬运仍在进行中，尚未全部完成。</p>
+
+      <div class="callout">
+        <b class="lead">未完成事项：</b>619门店仍有部分货品尚未搬运至808。原因：货品量较大，且本周需同时兼顾批发商对接工作，搬运时间被分摊。解决办法：下周集中安排时间完成剩余货品搬运。新的完成时间：预计下周内完成搬运并配合808上架。
+      </div>
+
+      <div class="callout suggest">
+        <b class="lead">我的判断与建议：</b>建议下周优先完成剩余货品搬运，并同步着手808门店的陈列规划，使货品一到位即可上架，减少货品在途或待处理的空档期。
+      </div>
+
+      <div class="owner-box"><div class="k">负责人</div><div class="v">Mason</div></div>
+    </div>
+
+  </div>
+
+  <footer class="report-footer">
+    <div class="fbrand">SnackLoop</div>
+    <div class="fmeta">Mason · 本周工作周报 · 2026年10月5日–10月9日 · 内部资料，请勿外传</div>
+  </footer>
+
+</div>
+</body>
+</html>
